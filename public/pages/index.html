@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CookMate</title>
+  <link href="../css/output.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-white scroll-smooth">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center px-4 sm:px-8 py-4 bg-white shadow-md sticky top-0 w-full z-50">
+    <!-- Left Navigation -->
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-amber-500">CookMate</h1>
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="ml-4 text-gray-700 md:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block ml-6">
+        <ul class="flex space-x-4">
+          <li><a href="#testimoni" class="text-gray-700 hover:text-amber-500 font-medium">Testimoni</a></li>
+          <li><a href="#features" class="text-gray-700 hover:text-amber-500 font-medium">Features</a></li>
+          <li><a href="#community" class="text-gray-700 hover:text-amber-500 font-medium">Community</a></li>
+          <li><a href="#contact" class="text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Right: Login Button -->
+    <div>
+      <a href="#login" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Login</a>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Menu (Hidden by default) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-4 px-4 sm:px-8 absolute w-full z-40">
+    <ul class="space-y-4">
+      <li><a href="#testimoni" class="block text-gray-700 hover:text-amber-500 font-medium">Testimoni</a></li>
+      <li><a href="#features" class="block text-gray-700 hover:text-amber-500 font-medium">Features</a></li>
+      <li><a href="#community" class="block text-gray-700 hover:text-amber-500 font-medium">Community</a></li>
+      <li><a href="#contact" class="block text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Home Section -->
+  <main id="home" class="flex flex-col md:flex-row items-center justify-between px-4 sm:px-8 pt-16 md:pt-32 pb-16 md:pb-20 bg-white min-h-screen">
+    
+    <!-- Left: Text Content -->
+    <div class="w-full md:w-1/2 mb-10 md:mb-0">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+        Find your favorite recipes <br class="hidden sm:block" /> easily on CookMate
+      </h2>
+      <p class="text-gray-600 mb-6 text-base sm:text-lg">
+        This application offers easy-to-use features for sharing, searching, and creating food recipes, making cooking a fun experience for users. So, what are you waiting for? Let's join the Mates!
+      </p>
+      <a href="#recipes" class="px-6 py-3 bg-amber-500 text-white rounded-lg text-lg font-medium hover:bg-amber-600 transition inline-block">
+        See Recipes
+      </a>
+    </div>
+
+    <!-- Right: Banner Image -->
+    <div class="w-full md:w-1/2 flex justify-center">
+      <img src="/public/assets/banner1.jpg" alt="CookMate Banner" class="w-150 h-120 object-cover rounded-lg shadow-lg" />
+    </div>
+  </main>
+
+  <!-- Testimoni Section -->
+  <section id="testimoni" class="px-4 sm:px-8 py-16 sm:py-20 bg-amber-50 flex flex-col justify-center items-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">What Our Mates! Say</h2>
+
+    <div class="w-full overflow-x-auto pb-4">
+      <div class="flex space-x-4 sm:space-x-6 min-w-max px-2">
+
+        <!-- Review 1 -->
+        <div class="min-w-[260px] sm:min-w-[280px] max-w-sm bg-white rounded-xl shadow-md p-4 sm:p-6">
+          <!-- Profile & User Info -->
+          <div class="flex items-center mb-4">
+            <img src="https://i.pinimg.com/736x/01/61/6b/01616b7daa1d2ef8846022bffc253d68.jpg" alt="User Profile" class="rounded-full w-12 h-12 sm:w-15 sm:h-15 mr-4">
+            <div>
+              <h3 class="font-bold text-gray-800">Sarah</h3>
+              <p class="text-xs sm:text-sm text-gray-500">Posted on March 12, 2025</p>
+            </div>
+          </div>
+          
+          <!-- Review Text -->
+          <p class="text-gray-600 mb-4 text-sm sm:text-base">"CookMate really helps me plan healthy meals for my family. Love the features!"</p>
+          <h3 class="font-bold text-amber-500 text-sm sm:text-base">— Sarah, Mom & Home Cook</h3>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="min-w-[260px] sm:min-w-[280px] max-w-sm bg-white rounded-xl shadow-md p-4 sm:p-6">
+          <!-- Profile & User Info -->
+          <div class="flex items-center mb-4">
+            <img src="https://i.pinimg.com/736x/83/5e/0f/835e0f0b83da64eb3ec31fd9944ef00d.jpg" alt="User Profile" class="rounded-full w-12 h-12 sm:w-15 sm:h-15 mr-4">
+            <div>
+              <h3 class="font-bold text-gray-800">Jennie</h3>
+              <p class="text-xs sm:text-sm text-gray-500">Posted on March 10, 2025</p>
+            </div>
+          </div>
+          
+          <!-- Review Text -->
+          <p class="text-gray-600 mb-4 text-sm sm:text-base">"I found so many new recipes I've never tried before. Super fun!"</p>
+          <h3 class="font-bold text-amber-500 text-sm sm:text-base">— Jennie, Student</h3>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="min-w-[260px] sm:min-w-[280px] max-w-sm bg-white rounded-xl shadow-md p-4 sm:p-6">
+          <!-- Profile & User Info -->
+          <div class="flex items-center mb-4">
+            <img src="https://i.pinimg.com/736x/41/01/9b/41019b8a921a316445966ccc9ba84919.jpg" alt="User Profile" class="rounded-full w-12 h-12 sm:w-15 sm:h-15 mr-4">
+            <div>
+              <h3 class="font-bold text-gray-800">Amanda</h3>
+              <p class="text-xs sm:text-sm text-gray-500">Posted on March 5, 2025</p>
+            </div>
+          </div>
+          
+          <!-- Review Text -->
+          <p class="text-gray-600 mb-4 text-sm sm:text-base">"Easy to use and beautiful UI. Cooking has never been this exciting."</p>
+          <h3 class="font-bold text-amber-500 text-sm sm:text-base">— Amanda, Food Blogger</h3>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="min-w-[260px] sm:min-w-[280px] max-w-sm bg-white rounded-xl shadow-md p-4 sm:p-6">
+          <!-- Profile & User Info -->
+          <div class="flex items-center mb-4">
+            <img src="https://i.pinimg.com/736x/7b/12/4f/7b124fa6117f9519f24d533e11e4e682.jpg" alt="User Profile" class="rounded-full w-12 h-12 sm:w-15 sm:h-15 mr-4">
+            <div>
+              <h3 class="font-bold text-gray-800">Erica</h3>
+              <p class="text-xs sm:text-sm text-gray-500">Posted on March 8, 2025</p>
+            </div>
+          </div>
+          
+          <!-- Review Text -->
+          <p class="text-gray-600 mb-4 text-sm sm:text-base">"I love the variety of recipes available on CookMate. It's been a game-changer for me!"</p>
+          <h3 class="font-bold text-amber-500 text-sm sm:text-base">— Erica, Mom & Home Cook</h3>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="px-4 sm:px-8 py-16 sm:py-20 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">Our Features</h2>
+      
+      <!-- Feature List Left -->
+      <div class="flex flex-col md:flex-row items-center mb-16 sm:mb-20">
+        <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4">Discover Amazing Recipes</h3>
+          <p class="text-gray-600 mb-6 text-sm sm:text-base">
+            Explore thousands of recipes from around the world, filtered to match your preferences and dietary needs.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <span class="text-amber-500 font-bold mr-2">•</span>
+              <span>Search by ingredients you have</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 font-bold mr-2">•</span>
+              <span>Filter by dietary restrictions</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 font-bold mr-2">•</span>
+              <span>Browse by cuisine or meal type</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 font-bold mr-2">•</span>
+              <span>Save favorites for quick access</span>
+            </li>
+          </ul>
+          <a href="#" class="px-4 sm:px-6 py-2 sm:py-3 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition inline-block text-sm sm:text-base">
+            Explore Recipes
+          </a>
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="bg-white border border-amber-300 rounded-xl p-6 shadow-lg">
+            <ul class="space-y-4 text-base sm:text-lg font-medium text-gray-800">
+              <li class="flex items-start">
+                <span class="text-amber-500 text-xl mr-3">🍳</span>
+                <span>Search by ingredients you have</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 text-xl mr-3">🥗</span>
+                <span>Filter by dietary restrictions</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 text-xl mr-3">🍜</span>
+                <span>Browse by cuisine or meal type</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-amber-500 text-xl mr-3">⭐</span>
+                <span>Save favorites for quick access</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature Split Right -->
+      <div class="flex flex-col md:flex-row-reverse items-center mb-16 sm:mb-20">
+        <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pl-8">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4">Meal Planning Made Simple</h3>
+          <p class="text-gray-600 mb-6 text-sm sm:text-base">
+            Plan your meals for the week with our intuitive drag-and-drop calendar. Save time, reduce food waste, and eat better.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div class="bg-amber-50 p-4 rounded-lg">
+              <h4 class="font-bold mb-2 text-sm sm:text-base">Grocery Lists</h4>
+              <p class="text-xs sm:text-sm text-gray-600">Auto-generated shopping lists based on your meal plan</p>
+            </div>
+            <div class="bg-amber-50 p-4 rounded-lg">
+              <h4 class="font-bold mb-2 text-sm sm:text-base">Nutrition Tracking</h4>
+              <p class="text-xs sm:text-sm text-gray-600">Monitor calories and nutrients across your meals</p>
+            </div>
+            <div class="bg-amber-50 p-4 rounded-lg">
+              <h4 class="font-bold mb-2 text-sm sm:text-base">Budget Friendly</h4>
+              <p class="text-xs sm:text-sm text-gray-600">Estimate costs and optimize for your budget</p>
+            </div>
+            <div class="bg-amber-50 p-4 rounded-lg">
+              <h4 class="font-bold mb-2 text-sm sm:text-base">Leftover Magic</h4>
+              <p class="text-xs sm:text-sm text-gray-600">Smart suggestions for using leftovers</p>
+            </div>
+          </div>
+          <a href="#" class="px-4 sm:px-6 py-2 sm:py-3 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition inline-block text-sm sm:text-base">
+            Try Meal Planning
+          </a>
+        </div>
+        <div class="w-full md:w-1/2">
+          <img src="https://i.pinimg.com/736x/b7/1c/8c/b71c8cb13775a09f50be280351d48053.jpg" alt="Meal Planning" class="w-full h-auto rounded-xl shadow-md" />
+        </div>
+      </div>
+      
+      <!-- Feature Quote Left -->
+      <div class="flex flex-col md:flex-row items-center mb-16 sm:mb-24">
+        <div class="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8">
+          <h3 class="text-xl sm:text-2xl font-bold mb-4">Interactive Recipe Guides</h3>
+          <p class="text-gray-600 mb-6 text-sm sm:text-base">
+            Our interactive recipe guides provide step-by-step instructions with visual cues, making complex recipes approachable for cooks of all skill levels.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start">
+              <span class="text-amber-500 font-bold mr-2">•</span>
+              <span>Visual step-by-step instructions</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 font-bold mr-2">•</span>
+              <span>Technique videos from professional chefs</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-amber-500 font-bold mr-2">•</span>
+              <span>Ingredient substitution suggestions</span>
+            </li>
+          </ul>
+          <a href="#" class="px-4 sm:px-6 py-2 sm:py-3 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition inline-block text-sm sm:text-base">
+            See How It Works
+          </a>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center">
+          <div class="interactive-images-container">
+            <!-- Main image (front) -->
+            <img src="https://i.pinimg.com/736x/ef/ad/5d/efad5d40deae0afe4c75b3a6b8b756e2.jpg" alt="Recipe Guide" class="interactive-image front-image rounded-xl shadow-md relative z-20" />
+            
+            <!-- Secondary image (middle) -->
+            <img src="https://i.pinimg.com/736x/c7/cd/c9/c7cdc9638f5e3b0f0ae29e51a2677eb6.jpg" alt="Technique Video" class="interactive-image middle-image rounded-xl shadow-md absolute top-4 left-4 z-10" />
+            
+            <!-- Tertiary image (back) -->
+            <img src="https://i.pinimg.com/736x/44/49/a1/4449a1ce9982c8233b7fa3391452b75b.jpg" alt="Ingredient Substitutions" class="interactive-image back-image rounded-xl shadow-md absolute top-8 left-8 z-0" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Favorite Menu Section -->
+  <section id="favorite-menu" class="px-4 sm:px-8 py-16 sm:py-20 bg-amber-50">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-8 sm:mb-10">
+        <h3 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Choose Your Favorite</h3>
+        <p class="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+          Swipe through and select the ingredients or dishes you like to get recipe recommendations that suit your taste!
+        </p>
+      </div>
+    
+      <!-- Scroll Indicators -->
+      <div class="flex items-center justify-center mb-4 sm:hidden">
+        <div class="w-8 h-1 bg-amber-300 rounded-full mx-1"></div>
+        <div class="w-8 h-1 bg-amber-500 rounded-full mx-1"></div>
+        <div class="w-8 h-1 bg-amber-300 rounded-full mx-1"></div>
+      </div>
+    
+      <!-- Scrollable List Container -->
+      <div class="relative">
+        <!-- Left Shadow Indicator -->
+        <div class="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-amber-50 to-transparent z-10 pointer-events-none"></div>
+        
+        <!-- Scrollable List -->
+        <div class="w-full overflow-x-auto pb-6 scrollbar-hide">
+          <div class="flex space-x-4 sm:space-x-6 min-w-max px-4">
+            <!-- Item -->
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/736x/4d/fb/71/4dfb7112d98183996fb8fa5399f26568.jpg" alt="Chicken" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Chicken</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/736x/26/11/61/261161e02379c643b2d354088eea742f.jpg" alt="Broccoli" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Broccoli</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/236x/13/61/18/1361181466abc2506776ecf0d73563ce.jpg" alt="Salmon" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Salmon</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/236x/69/25/13/6925136e8469d474c1616fb6608adc23.jpg" alt="Egg" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Egg</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/236x/67/3e/81/673e8140da9ddb9109d20a17613cc8bf.jpg" alt="Potato" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Potato</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/236x/00/71/aa/0071aa7db495792cdde6ca2559f65d94.jpg" alt="Tofu" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Tofu</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/736x/ee/8c/cc/ee8ccc70073ea0a4c2498f58aff0ff60.jpg" alt="Tempe" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Tempe</p>
+            </div> 
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/474x/ab/32/ba/ab32ba945ccad6b05aab560360db7211.jpg" alt="Shrimp" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Shrimp</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/236x/5f/e8/13/5fe813b6ca8d045869cabf0ad10c8866.jpg" alt="Green Beans" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Green Beans</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/236x/3c/b0/1a/3cb01a7f4d6435ef3627a0bf876c49f7.jpg" alt="Beef" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Beef</p>
+            </div>
+            <div class="min-w-[120px] sm:min-w-[160px] bg-white rounded-xl shadow p-4 sm:p-6 flex flex-col items-center hover:shadow-lg transition-shadow">
+              <img src="https://i.pinimg.com/236x/75/cf/7e/75cf7e9f17c73561d66960907763b1e8.jpg" alt="Carrot" class="rounded-full w-16 h-16 sm:w-20 sm:h-20 mb-3" />
+              <p class="text-sm sm:text-base font-semibold text-gray-700">Carrot</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Shadow Indicator -->
+        <div class="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-amber-50 to-transparent z-10 pointer-events-none"></div>
+        
+        <!-- Optional: Scroll Buttons for Desktop -->
+        <button class="hidden md:block absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-20 hover:bg-amber-50 focus:outline-none" id="scroll-left">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button class="hidden md:block absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md z-20 hover:bg-amber-50 focus:outline-none" id="scroll-right">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    
+      <!-- Optional: Scroll Indicator Dots -->
+      <div class="flex justify-center mt-6">
+        <div class="flex space-x-2">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          <span class="w-2 h-2 rounded-full bg-amber-300"></span>
+          <span class="w-2 h-2 rounded-full bg-amber-300"></span>
+          <span class="w-2 h-2 rounded-full bg-amber-300"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Community Section-->
+  <section id="community" class="px-4 sm:px-8 py-16 sm:py-20 bg-white flex flex-col justify-center items-center">
+    <div class="max-w-6xl mx-auto w-full">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">Join Our Community</h2>
+      
+      <!-- Post Square Layout -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
+        <!-- Post 1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="/public/assets/komunitas.jpg" alt="Community Post" class="w-full h-48 sm:h-64 object-cover" />
+          <div class="p-4 sm:p-6">
+            <h3 class="text-lg sm:text-xl font-bold mb-2">Komunitas Makanan Nusantara</h3>
+            <p class="text-gray-600 mb-4 text-sm sm:text-base">Komunitas yang dibangun secara sehat dan harmonis untuk saling berbagi menu nusantara.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-amber-500 font-medium text-sm">April 15, 2025</span>
+              <a href="#" class="text-amber-500 hover:underline text-sm sm:text-base">Join Community →</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Post 2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="/public/assets/komunitas2.jpg" alt="Community Post" class="w-full h-48 sm:h-64 object-cover" />
+          <div class="p-4 sm:p-6">
+            <h3 class="text-lg sm:text-xl font-bold mb-2">Komunitas Jajanan Pasar</h3>
+            <p class="text-gray-600 mb-4 text-sm sm:text-base">Berbagi resep jajanan pasar bersama teman teman komunitas.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-amber-500 font-medium text-sm">April 20, 2025</span>
+              <a href="#" class="text-amber-500 hover:underline text-sm sm:text-base">Join Community →</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Post 3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+          <img src="/public/assets/komunitas3.jpg" alt="Community Post" class="w-full h-48 sm:h-64 object-cover" />
+          <div class="p-4 sm:p-6">
+            <h3 class="text-lg sm:text-xl font-bold mb-2">Makan Apa Hari ini?</h3>
+            <p class="text-gray-600 mb-4 text-sm sm:text-base">Bingung mau makan apa? Join komunitas ini untuk menemukan menu yang menarik setiap harinya.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-amber-500 font-medium text-sm">April 10, 2025</span>
+              <a href="#" class="text-amber-500 hover:underline text-sm sm:text-base">Join Community →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="bg-amber-50 py-16 px-4 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Contact Us</h2>
+      <p class="text-gray-600 mb-8">Have questions, feedback, or ideas for CookMate? We'd love to hear from you!</p>
+    </div>
+  
+    <form action="#" method="POST" class="max-w-xl mx-auto space-y-6 bg-white p-6 sm:p-8 rounded-lg shadow-md">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+        <input type="text" name="name" id="name" required
+          class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:ring-amber-500 focus:border-amber-500 p-3" />
+      </div>
+  
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" name="email" id="email" required
+          class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:ring-amber-500 focus:border-amber-500 p-3" />
+      </div>
+  
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+        <textarea name="message" id="message" rows="4" required
+          class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:ring-amber-500 focus:border-amber-500 p-3"></textarea>
+      </div>
+  
+      <div class="text-center">
+        <button type="submit"
+          class="inline-block bg-amber-500 hover:bg-amber-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Login Section -->
+  <section id="login" class="px-4 sm:px-8 py-16 sm:py-20 bg-white flex flex-col justify-center items-center">
+    <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">Login to CookMate</h2>
+    
+    <div class="max-w-md mx-auto w-full bg-white p-6 sm:p-8 rounded-xl shadow-md">
+      <form>
+        <div class="mb-4">
+          <label for="login-email" class="block text-gray-700 mb-2 text-sm sm:text-base">Email</label>
+          <input type="email" id="login-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </div>
+        
+        <div class="mb-6">
+          <label for="login-password" class="block text-gray-700 mb-2 text-sm sm:text-base">Password</label>
+          <input type="password" id="login-password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+        </div>
+        
+        <button type="submit" class="w-full px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition mb-4 text-sm sm:text-base">
+          Login
+        </button>
+        
+        <p class="text-center text-gray-600 text-sm sm:text-base">
+          Don't have an account? <a href="#register" class="text-amber-500 hover:underline">Register</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 sm:py-10 px-4 sm:px-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold text-amber-500 mb-4">CookMate</h3>
+        <p class="text-gray-300 text-sm sm:text-base">Your ultimate cooking companion for finding, sharing, and creating delicious recipes.</p>
+      </div>
+      
+      <div>
+        <h4 class="text-base sm:text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Home</a></li>
+          <li><a href="#testimoni" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Testimoni</a></li>
+          <li><a href="#features" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Features</a></li>
+          <li><a href="#community" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Community</a></li>
+          <li><a href="#contact" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-base sm:text-lg font-semibold mb-4">Connect With Us</h4>
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Facebook</a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Twitter</a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Instagram</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+      <p>&copy; 2025 CookMate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
+      // Close mobile menu when clicking a link
+      const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+      
+      // Smooth scrolling for all hash links
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Favorite menu scroll buttons
+      const scrollContainer = document.querySelector('#favorite-menu .overflow-x-auto');
+      const scrollLeftBtn = document.getElementById('scroll-left');
+      const scrollRightBtn = document.getElementById('scroll-right');
+      
+      if (scrollContainer && scrollLeftBtn && scrollRightBtn) {
+        // Scroll buttons functionality
+        scrollLeftBtn.addEventListener('click', function() {
+          scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+        
+        scrollRightBtn.addEventListener('click', function() {
+          scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+        
+        // Show/hide scroll buttons based on scroll position
+        scrollContainer.addEventListener('scroll', function() {
+          // Show/hide left button
+          if (scrollContainer.scrollLeft > 20) {
+            scrollLeftBtn.classList.remove('opacity-0');
+          } else {
+            scrollLeftBtn.classList.add('opacity-0');
+          }
+          
+          // Show/hide right button
+          if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 20) {
+            scrollRightBtn.classList.add('opacity-0');
+          } else {
+            scrollRightBtn.classList.remove('opacity-0');
+          }
+        });
+        
+        // Trigger scroll event to set initial button states
+        scrollContainer.dispatchEvent(new Event('scroll'));
+      }
+    });
+  </script>
+  <style>
+    /* Hide scrollbar but keep functionality */
+    .scrollbar-hide {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;  /* Chrome, Safari and Opera */
+    }
+    
+    .interactive-images-container {
+      position: relative;
+      width: 400px;
+      height: 350px;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    
+    .interactive-image {
+      transition: all 0.3s ease-in-out;
+      width: 400px;
+      max-width: 400px;
+      object-fit: cover;
+      height: 500px;
+    }
+    
+    .middle-image {
+      opacity: 0.9;
+      transform: scale(1.0);
+    }
+    
+    .back-image {
+      opacity: 0.8;
+      transform: scale(1.0);
+    }
+    
+    /* Hover effects */
+    .middle-image:hover {
+      transform: translateY(-20px) scale(1);
+      opacity: 1;
+      z-index: 30;
+    }
+    
+    .back-image:hover {
+      transform: translateY(-40px) scale(1);
+      opacity: 1;
+      z-index: 30;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .interactive-images-container {
+        height: 300px;
+      }
+      
+      .middle-image {
+        top: 15px;
+        left: 15px;
+      }
+      
+      .back-image {
+        top: 30px;
+        left: 30px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .interactive-images-container {
+        height: 350px;
+      }
+      
+      .interactive-image {
+        max-height: 200px;
+      }
+      
+      .middle-image {
+        top: 10px;
+        left: 10px;
+      }
+      
+      .back-image {
+        top: 20px;
+        left: 20px;
+      }
+    }
+  </style>
+
+</body>
+</html>
