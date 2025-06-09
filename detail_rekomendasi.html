@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nasi Gudeg Yogya - CookMate</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-white scroll-smooth">
+  <!-- Header -->
+  <header class="flex justify-between items-center px-4 sm:px-8 py-4 bg-white shadow-lg sticky top-0 w-full z-50">
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-amber-500"><a href="index.html" class="hover:text-amber-600 transition">CookMate</a></h1>
+      <button id="mobile-menu-button" class="ml-4 text-gray-700 md:hidden focus:outline-none focus:ring-2 focus:ring-amber-300 rounded">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+          <nav class="hidden md:block ml-6">
+        <ul class="flex space-x-4">
+          <li><a href="#testimoni" class="text-gray-700 hover:text-amber-500 font-medium">Testimoni</a></li>
+          <li><a href="#features" class="text-gray-700 hover:text-amber-500 font-medium">Features</a></li>
+          <li><a href="#community" class="text-gray-700 hover:text-amber-500 font-medium">Community</a></li>
+          <li><a href="#contact" class="text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+    <ul class="flex flex-col space-y-2 p-4">
+      <li><a href="rekomendasi.html" class="text-amber-500 font-medium hover:text-amber-600 transition">Resep</a></li>
+      <li><a href="artikel.html" class="text-gray-700 hover:text-amber-500 font-medium transition">Artikel</a></li>
+      <li><a href="products.html" class="text-gray-700 hover:text-amber-500 font-medium transition">Produk</a></li>
+      <li><a href="index.html#community" class="text-gray-700 hover:text-amber-500 font-medium transition">Community</a></li>
+      <li><a href="index.html#contact" class="text-gray-700 hover:text-amber-500 font-medium transition">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <section class="bg-gray-50 py-4">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <nav class="text-base">
+        <ol class="flex items-center space-x-2">
+          <li><a href="index.html" class="text-gray-500 hover:text-amber-500 transition">Home</a></li>
+          <li class="text-gray-400">/</li>
+          <li><a href="rekomendasi.html" class="text-gray-500 hover:text-amber-500 transition">Resep</a></li>
+          <li class="text-gray-400">/</li>
+          <li class="text-amber-500 font-medium">Nasi Gudeg Yogya</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Chef Info -->
+  <section class="py-4 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="flex items-center p-3 bg-gray-50 rounded-lg shadow-sm">
+        <img src="https://i.pinimg.com/736x/01/61/6b/01616b7daa1d2ef8846022bffc253d68.jpg" alt="Chef Sarah" class="w-10 h-10 rounded-full mr-3">
+        <div>
+          <h3 class="font-semibold text-gray-800 text-sm">Chef Sarah</h3>
+          <p class="text-xs text-gray-600">Culinary Expert • 156 resep</p>
+        </div>
+        <button class="ml-auto px-3 py-1 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition focus:ring-2 focus:ring-amber-300 text-xs">
+          Follow
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Header -->
+  <section class="py-8 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Recipe Image -->
+        <div>
+          <div class="relative mb-4">
+            <img src="public/assets/gudeg.jpg" alt="Nasi Gudeg Yogya" class="w-full h-96 object-cover rounded-xl shadow-lg">
+            <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm font-medium">
+              🔥 Trending
+            </div>
+            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium flex items-center">
+              <span>⭐⭐⭐⭐⭐</span>
+              <span class="ml-1">4.8</span>
+            </div>
+          </div>
+          <!-- Video Tutorial Thumbnail & Nutrition Info -->
+          <div class="flex flex-col lg:flex-row gap-4">
+            <div class="relative flex-1">
+              <button onclick="showVideoCard()" class="w-full h-24 bg-black/30 rounded-lg flex items-center justify-center backdrop-blur-sm hover:bg-black/40 transition focus:outline-none focus:ring-2 focus:ring-amber-300">
+                <div class="text-center">
+                  <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                  <p class="text-xs text-white/75">Video Tutorial 25 menit</p>
+                </div>
+              </button>
+              <!-- Video Card (Hidden by default) -->
+              <div id="videoCard" class="hidden-fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                <div class="bg-white rounded-xl shadow-xl p-4 sm:p-6 max-w-lg w-full mx-4 transform transition-all duration-300">
+                  <h3 class="text-base font-bold text-gray-800 mb-2">🎥 Video Tutorial Premium</h3>
+                  <p class="text-gray-700 text-sm mb-4">Akses video tutorial langkah demi langkah untuk memasak gudeg autentik dengan berlangganan premium.</p>
+                  <a href="keranjang.html" class="w-full block bg-amber-500 text-white py-2 rounded-lg hover:bg-amber-600 transition font-semibold text-center focus:ring-2 focus:ring-amber-300">
+                    Berlangganan Sekarang
+                  </a>
+                  <button onclick="hideVideoCard()" class="w-full mt-2 border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50 transition focus:ring-2 focus:ring-gray-300 text-sm">
+                    Tutup
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Nutrition Info -->
+            <div class="bg-white rounded-lg shadow-sm p-4 flex-1">
+              <h3 class="text-base font-bold text-gray-800 mb-3">📊 Informasi Gizi</h3>
+              <div class="space-y-2">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Kalori</span>
+                  <span class="font-semibold">450 kcal</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Protein</span>
+                  <span class="font-semibold">12g</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Karbohidrat</span>
+                  <span class="font-semibold">65g</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Lemak</span>
+                  <span class="font-semibold">18g</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-600">Serat</span>
+                  <span class="font-semibold">8g</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Recipe Info -->
+        <div>
+          <div class="mb-3">
+            <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded-full text-xs font-medium mr-2">Indonesian</span>
+            <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded-full text-xs font-medium">Traditional</span>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">Nasi Gudeg Yogya</h1>
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400 mr-2">
+              <span>⭐⭐⭐⭐⭐</span>
+            </div>
+            <span class=" text-gray-600 text-sm">(4.8) 1,234 reviews</span>
+            <span class="mx-2 text-gray-400">•</span>
+            <span class="text-gray-600 text-sm">❤️ 2,156 saves</span>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-4">
+            Gudeg khas Yogyakarta dengan cita rasa manis dan gurih yang autentik. Dimasak dengan nangka muda, 
+            santan kelapa, dan bumbu rempah tradisional yang kaya akan cita rasa. Disajikan dengan nasi hangat, 
+            ayam kampung, telur, dan sambal krecek.
+          </p>
+          <!-- Recipe Stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+            <div class="text-center p-3 bg-gray-50 rounded-lg hover:transform hover:-translate-y-1 transition">
+              <div class="text-xl mb-1">⏱️</div>
+              <p class="text-xs text-gray-600">Waktu Masak</p>
+              <p class="font-semibold text-sm">45 menit</p>
+            </div>
+            <div class="text-center p-3 bg-gray-50 rounded-lg hover:transform hover:-translate-y-1 transition">
+              <div class="text-xl mb-1">👨‍🍳</div>
+              <p class="text-xs text-gray-600">Tingkat</p>
+              <p class="font-semibold text-sm">Medium</p>
+            </div>
+            <div class="text-center p-3 bg-gray-50 rounded-lg hover:transform hover:-translate-y-1 transition">
+              <div class="text-xl mb-1">🍽️</div>
+              <p class="text-xs text-gray-600">Porsi</p>
+              <p class="font-semibold text-sm">4 orang</p>
+            </div>
+            <div class="text-center p-3 bg-gray-50 rounded-lg hover:transform hover:-translate-y-1 transition">
+              <div class="text-xl mb-1">🔥</div>
+              <p class="text-xs text-gray-600">Kalori</p>
+              <p class="font-semibold text-sm">450 kcal</p>
+            </div>
+          </div>
+          <!-- Action Buttons -->
+          <div class="flex space-x-3 mb-4">
+            <button class="flex-1 bg-amber-500 text-white py-2 rounded-lg hover:bg-amber-600 transition font-semibold text-base focus:ring-2 focus:ring-amber-300" onclick="saveRecipe()">
+              ❤️ Simpan Resep
+            </button>
+            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition focus:ring-2 focus:ring-gray-300 text-base" onclick="shareRecipe()">
+              📤 Bagikan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Content -->
+  <section class="py-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Main Content -->
+        <div class="lg:col-span-2">
+          <!-- Ingredients -->
+          <div class="bg-white rounded-xl shadow-md p-4 sm:p-6 mb-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">🥘 Bahan-bahan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h3 class="text-base font-semibold text-gray-800 mb-3">Bahan Utama:</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">500g nangka muda, potong dadu</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">400ml santan kelapa</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">2 lembar daun salam</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">3 lembar daun jeruk</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">2 batang serai, memarkan</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">2 sdm gula merah, sisir</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">1 sdt garam</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-base font-semibold text-gray-800 mb-3">Bumbu Halus:</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">8 siung bawang merah</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">4 siung bawang putih</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">3 buah cabai merah</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">2 cm jahe</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">3 cm lengkuas</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">1 sdt ketumbar</span>
+                  </li>
+                  <li class="flex items-center">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">3 buah kemiri</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Instructions -->
+          <div class="bg-white rounded-xl shadow-md p-4 sm:p-6 mb-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">👩‍🍳 Cara Memasak</h2>
+            <div class="space-y-3">
+              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
+                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">1</div>
+                <div>
+                  <h3 class="font-semibold text-sm text-gray-800 mb-1">Persiapan Bumbu</h3>
+                  <p class="text-sm text-gray-700">Haluskan semua bumbu halus menggunakan blender atau cobek hingga benar-benar halus dan tercampur rata.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
+                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">2</div>
+                <div>
+                  <h3 class="font-semibold text-sm text-gray-800 mb-1">Tumis Bumbu</h3>
+                  <p class="text-sm text-gray-700">Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, daun jeruk, dan serai hingga harum dan matang.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
+                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">3</div>
+                <div>
+                  <h3 class="font-semibold text-sm text-gray-800 mb-1">Masak Nangka</h3>
+                  <p class="text-sm text-gray-700">Masukkan potongan nangka muda, aduk rata dengan bumbu. Masak hingga nangka mulai empuk, sekitar 10 menit.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
+                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">4</div>
+                <div>
+                  <h3 class="font-semibold text-sm text-gray-800 mb-1">Tambahkan Santan</h3>
+                  <p class="text-sm text-gray-700">Tuang santan kelapa, tambahkan gula merah dan garam. Aduk perlahan dan masak dengan api kecil.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
+                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">5</div>
+                <div>
+                  <h3 class="font-semibold text-sm text-gray-800 mb-1">Masak Hingga Matang</h3>
+                  <p class="text-sm text-gray-700">Lanjutkan memasak dengan api kecil selama 20-25 menit hingga santan mengental dan bumbu meresap sempurna. Aduk sesekali agar tidak gosong.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
+                <div class="w-7 h-7 bg-green-500 text-white rounded-full flex items-center justify-center font-medium text-sm">✓</div>
+                <div>
+                  <h3 class="font-semibold text-sm text-gray-800 mb-1">Sajikan</h3>
+                  <p class="text-sm text-gray-700">Gudeg siap disajikan dengan nasi hangat, ayam kampung, telur, dan sambal krecek. Nikmati selagi hangat!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tips -->
+          <div class="bg-amber-50 border-l-4 border-amber-500 p-4 sm:p-6 mb-6 rounded-lg">
+            <h3 class="text-base font-semibold text-amber-800 mb-2">💡 Tips Chef</h3>
+            <ul class="space-y-1 text-amber-700 text-sm">
+              <li>• Pilih nangka muda yang masih segar untuk tekstur yang lebih baik</li>
+              <li>• Gunakan santan kelapa segar untuk rasa yang lebih autentik</li>
+              <li>• Masak dengan api kecil agar santan tidak pecah</li>
+              <li>• Gudeg akan lebih enak jika didiamkan semalaman sebelum disajikan</li>
+            </ul>
+          </div>
+          <!-- Reviews -->
+          <div class="bg-white rounded-xl shadow-md p-4 sm:p-6">
+            <h2 class="text-xl font-bold text-gray-800 mb-4">⭐ Review (1,234)</h2>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3 hover:bg-gray-50 p-1 rounded-lg transition">
+                <img src="https://i.pinimg.com/736x/83/5e/0f/835e0f0b83da64eb3ec31fd9944ef00d.jpg" alt="User" class="w-8 h-8 rounded-full">
+                <div class="flex-grow">
+                  <div class="flex items-center space-x-2 mb-1">
+                    <h4 class="font-semibold text-gray-800 text-sm">Jennie</h4>
+                    <div class="flex text-yellow-400 text-xs">⭐⭐⭐⭐⭐</div>
+                    <span class="text-xs text-gray-500">2 hari lalu</span>
+                  </div>
+                  <p class="text-gray-700 text-sm">Resep yang sangat detail dan mudah diikuti! Gudeg saya jadi enak banget, keluarga sampai minta dimasak lagi. Terima kasih Chef Sarah! 😊</p>
+                  <div class="flex items-center space-x-3 mt-1">
+                    <button class="text-xs text-gray-500 hover:text-amber-500 transition focus:ring-2 focus:ring-amber-300">👍 24</button>
+                    <button class="text-xs text-gray-500 hover:text-amber-500 transition focus:ring-2 focus:ring-amber-300">Balas</button>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-start space-x-3 hover:bg-gray-50 p-1 rounded-lg transition">
+                <img src="https://i.pinimg.com/736x/41/01/9b/41019b8a921a316445966ccc9ba84919.jpg" alt="User" class="w-8 h-8 rounded-full">
+                <div class="flex-grow">
+                  <div class="flex items-center space-x-2 mb-1">
+                    <h4 class="font-semibold text-gray-800 text-sm">Amanda</h4>
+                    <div class="flex text-yellow-400 text-xs">⭐⭐⭐⭐⭐</div>
+                    <span class="text-xs text-gray-500">1 minggu lalu</span>
+                  </div>
+                  <p class="text-gray-700 text-sm">Pertama kali masak gudeg dan berhasil! Video tutorialnya sangat membantu, step by step jelas banget. Worth it berlangganan premium!</p>
+                  <div class="flex items-center space-x-3 mt-1">
+                    <button class="text-xs text-gray-500 hover:text-amber-500 transition focus:ring-2 focus:ring-amber-300">👍 18</button>
+                    <button class="text-xs text-gray-500 hover:text-amber-500 transition focus:ring-2 focus:ring-amber-300">Balas</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-200">
+              <button class="w-full py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition focus:ring-2 focus:ring-gray-300 text-sm">
+                Lihat Semua Review
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar -->
+        <div class="lg:col-span-1 lg:sticky lg:top-24 space-y-4">
+          <!-- Related Recipes -->
+          <div class="bg-white rounded-lg shadow-sm p-4">
+            <h3 class="text-base font-bold text-gray-800 mb-3">🍽️ Resep Terkait</h3>
+            <div class="space-y-2">
+              <div class="flex items-start space-x-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                <img src="public/assets/rendang.jpg" alt="Rendang" class="w-12 h-14 object-cover rounded">
+                <div class="flex-grow">
+                  <h4 class="font-semibold text-sm text-gray-800 mb-1">Rendang Daging Sapi</h4>
+                  <div class="flex text-yellow-400 text-xs mb-0.5">⭐⭐⭐⭐⭐</div>
+                  <p class="text-xs text-gray-500">2 jam • Medium</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                <img src="public/assets/gadogado.jpg" alt="Gado-gado" class="w-12 h-14 object-cover rounded">
+                <div class="flex-grow">
+                  <h4 class="font-semibold text-sm text-gray-800 mb-1">Gado-gado</h4>
+                  <div class="flex text-yellow-400 text-xs mb-0.5">⭐⭐⭐⭐</div>
+                  <p class="text-xs text-gray-500">25 min • Easy</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                <img src="public/assets/bubur.jpg" alt="Bubur Ayam" class="w-12 h-14 object-cover rounded">
+                <div class="flex-grow">
+                  <h4 class="font-semibold text-sm text-gray-800 mb-1">Bubur Ayam Betawi</h4>
+                  <div class="flex text-yellow-400 text-xs mb-0.5">⭐⭐⭐⭐</div>
+                  <p class="text-xs text-gray-500">40 min • Medium</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Shopping List -->
+          <div class="bg-white rounded-lg shadow-sm p-4">
+            <h3 class="text-base font-bold text-gray-800 mb-2">🛒 Beli Bahan</h3>
+            <p class="text-sm text-gray-600 mb-3">Dapatkan bahan-bahan segar untuk resep ini</p>
+            <button class="w-full py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-semibold text-sm focus:ring-2 focus:ring-amber-300" onclick="window.location.href='products.html'">
+              Belanja Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 sm:py-10 px-4 sm:px-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold text-amber-500 mb-4">CookMate</h3>
+        <p class="text-gray-300 text-sm sm:text-base">Your ultimate cooking companion for finding, sharing, and creating delicious recipes.</p>
+      </div>
+      
+      <div>
+        <h4 class="text-base sm:text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Home</a></li>
+          <li><a href="#testimoni" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Testimoni</a></li>
+          <li><a href="#features" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Features</a></li>
+          <li><a href="#community" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Community</a></li>
+          <li><a href="#contact" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-base sm:text-lg font-semibold mb-4">Connect With Us</h4>
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Facebook</a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Twitter</a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Instagram</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+      <p>&copy; 2025 CookMate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function saveRecipe() {
+      alert('Resep berhasil disimpan ke favorit Anda!');
+    }
+
+    function shareRecipe() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'Nasi Gudeg Yogya - CookMate',
+          text: 'Lihat resep gudeg autentik ini di CookMate!',
+          url: window.location.href
+        });
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Link resep berhasil disalin!');
+      }
+    }
+
+    function showVideoCard() {
+      document.getElementById('videoCard').classList.remove('hidden');
+      document.getElementById('videoCard').classList.add('opacity-100', 'scale-100');
+    }
+
+    function hideVideoCard() {
+      const card = document.getElementById('videoCard');
+      card.classList.remove('opacity-100', 'scale-100');
+      card.classList.add('opacity-0', 'scale-95');
+      setTimeout(() => card.classList.add('hidden'), 300);
+    }
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

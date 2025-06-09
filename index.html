@@ -12,7 +12,7 @@
   <header class="flex justify-between items-center px-4 sm:px-8 py-4 bg-white shadow-md sticky top-0 w-full z-50">
     <!-- Left Navigation -->
     <div class="flex items-center">
-      <h1 class="text-2xl font-bold text-amber-500">CookMate</h1>
+      <h1 class="text-2xl font-bold text-amber-500"><a href="index.html">CookMate</a></h1>
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-button" class="ml-4 text-gray-700 md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -32,7 +32,7 @@
 
     <!-- Right: Login Button -->
     <div>
-      <a href="#login" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Login</a>
+      <a href="login.html" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Login</a>
     </div>
   </header>
 
@@ -57,8 +57,8 @@
       <p class="text-gray-600 mb-6 text-base sm:text-lg">
         This application offers easy-to-use features for sharing, searching, and creating food recipes, making cooking a fun experience for users. So, what are you waiting for? Let's join the Mates!
       </p>
-      <a href="#recipes" class="px-6 py-3 bg-amber-500 text-white rounded-lg text-lg font-medium hover:bg-amber-600 transition inline-block">
-        See Recipes
+      <a href="#" class="px-6 py-3 bg-amber-500 text-white rounded-lg text-lg font-medium hover:bg-amber-600 transition inline-block">
+        Join Us
       </a>
     </div>
 
@@ -67,6 +67,96 @@
       <img src="public/assets/banner1.jpg" alt="CookMate Banner" class="w-150 h-120 object-cover rounded-lg shadow-lg" />
     </div>
   </main>
+
+  <!-- Artikel -->
+  <section class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">📚 Tips & Artikel Terbaru</h2>
+      <p class="text-xl text-gray-600">Tingkatkan skill memasak dengan tips dari chef profesional</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Article Card 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="window.location.href='artikel.html'">
+        <img src="public/assets/nasi.jpg" alt="Tips Memasak Nasi" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex items-center mb-3">
+            <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded-full text-xs font-medium mr-3">Tips Memasak</span>
+            <span class="text-sm text-gray-500">📅 3 hari lalu</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2 hover:text-amber-500 transition">
+            10 Tips Memasak Nasi Pulen dan Tidak Lengket
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Memasak nasi yang pulen dan tidak lengket ternyata ada triknya lho! Simak tips jitu dari chef profesional...
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="https://i.pinimg.com/736x/01/61/6b/01616b7daa1d2ef8846022bffc253d68.jpg" alt="Chef Sarah" class="w-6 h-6 rounded-full mr-2">
+              <span class="text-sm text-gray-700">Chef Sarah</span>
+            </div>
+            <span class="text-xs text-gray-500">⏱️ 5 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Card 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="window.location.href='artikel.html'">
+        <img src="public/assets/hacls.jpg" alt="Kitchen Hacks" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex items-center mb-3">
+            <span class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full text-xs font-medium mr-3">Kitchen Hacks</span>
+            <span class="text-sm text-gray-500">📅 1 minggu lalu</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2 hover:text-amber-500 transition">
+            15 Kitchen Hacks yang Akan Mengubah Cara Memasak Anda
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Trik-trik dapur yang akan membuat memasak jadi lebih mudah dan efisien. Wajib dicoba!
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="https://i.pinimg.com/736x/83/5e/0f/835e0f0b83da64eb3ec31fd9944ef00d.jpg" alt="Chef Jennie" class="w-6 h-6 rounded-full mr-2">
+              <span class="text-sm text-gray-700">Chef Jennie</span>
+            </div>
+            <span class="text-xs text-gray-500">⏱️ 8 min read</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article Card 3 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer" onclick="window.location.href='artikel.html'">
+        <img src="public/assets/rendang.jpg" alt="Kuliner Nusantara" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <div class="flex items-center mb-3">
+            <span class="bg-purple-100 text-purple-600 px-2 py-1 rounded-full text-xs font-medium mr-3">Kuliner Nusantara</span>
+            <span class="text-sm text-gray-500">📅 2 minggu lalu</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-800 mb-2 hover:text-amber-500 transition">
+            Sejarah dan Filosofi Rendang Minangkabau
+          </h3>
+          <p class="text-gray-600 text-sm mb-4">
+            Mengenal lebih dalam tentang rendang, makanan terlezat di dunia versi CNN Travel...
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="https://i.pinimg.com/736x/41/01/9b/41019b8a921a316445966ccc9ba84919.jpg" alt="Chef Amanda" class="w-6 h-6 rounded-full mr-2">
+              <span class="text-sm text-gray-700">Chef Amanda</span>
+            </div>
+            <span class="text-xs text-gray-500">⏱️ 6 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-12 py-16">
+      <a href="artikel.html" class="px-8 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-semibold text-lg">
+        📚 Lihat Semua Artikel & Tips
+      </a>
+    </div>
+  </div>
+</section>
 
   <!-- Testimoni Section -->
   <section id="testimoni" class="px-4 sm:px-8 py-16 sm:py-20 bg-amber-50 flex flex-col justify-center items-center">
@@ -173,7 +263,7 @@
               <span>Save favorites for quick access</span>
             </li>
           </ul>
-          <a href="#" class="px-4 sm:px-6 py-2 sm:py-3 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition inline-block text-sm sm:text-base">
+          <a href="rekomendasi.html" class="px-4 sm:px-6 py-2 sm:py-3 bg-amber-500 text-white rounded-lg font-medium hover:bg-amber-600 transition inline-block text-sm sm:text-base">
             Explore Recipes
           </a>
         </div>
@@ -459,33 +549,6 @@
         </button>
       </div>
     </form>
-  </section>
-
-  <!-- Login Section -->
-  <section id="login" class="px-4 sm:px-8 py-16 sm:py-20 bg-white flex flex-col justify-center items-center">
-    <h2 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">Login to CookMate</h2>
-    
-    <div class="max-w-md mx-auto w-full bg-white p-6 sm:p-8 rounded-xl shadow-md">
-      <form>
-        <div class="mb-4">
-          <label for="login-email" class="block text-gray-700 mb-2 text-sm sm:text-base">Email</label>
-          <input type="email" id="login-email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
-        </div>
-        
-        <div class="mb-6">
-          <label for="login-password" class="block text-gray-700 mb-2 text-sm sm:text-base">Password</label>
-          <input type="password" id="login-password" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
-        </div>
-        
-        <button type="submit" class="w-full px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition mb-4 text-sm sm:text-base">
-          Login
-        </button>
-        
-        <p class="text-center text-gray-600 text-sm sm:text-base">
-          Don't have an account? <a href="#register" class="text-amber-500 hover:underline">Register</a>
-        </p>
-      </form>
-    </div>
   </section>
 
   <!-- Footer -->

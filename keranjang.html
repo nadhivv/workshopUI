@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keranjang - CookMate</title>
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="font-sans bg-white scroll-smooth">
+  <!-- Header -->
+  <header class="flex justify-between items-center px-4 sm:px-8 py-4 bg-white shadow-lg sticky top-0 w-full z-50">
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold text-amber-500"><a href="index.html" class="hover:text-amber-600 transition">CookMate</a></h1>
+      <button id="mobile-menu-button" class="ml-4 text-gray-700 md:hidden focus:outline-none focus:ring-2 focus:ring-amber-300 rounded">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <nav class="hidden md:block ml-6">
+        <ul class="flex space-x-6">
+          <li><a href="rekomendasi.html" class="text-amber-500 font-medium hover:text-amber-600 transition">Resep</a></li>
+          <li><a href="artikel.html" class="text-gray-700 hover:text-amber-500 font-medium transition">Artikel</a></li>
+          <li><a href="products.html" class="text-gray-700 hover:text-amber-500 font-medium transition">Produk</a></li>
+          <li><a href="index.html#community" class="text-gray-700 hover:text-amber-500 font-medium transition">Community</a></li>
+          <li><a href="index.html#contact" class="text-gray-700 hover:text-amber-500 font-medium transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <a href="dashboard.html" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition focus:ring-2 focus:ring-amber-300">Dashboard</a>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+    <ul class="flex flex-col space-y-2 p-4">
+      <li><a href="rekomendasi.html" class="text-amber-500 font-medium hover:text-amber-600 transition">Resep</a></li>
+      <li><a href="artikel.html" class="text-gray-700 hover:text-amber-500 font-medium transition">Artikel</a></li>
+      <li><a href="products.html" class="text-gray-700 hover:text-amber-500 font-medium transition">Produk</a></li>
+      <li><a href="index.html#community" class="text-gray-700 hover:text-amber-500 font-medium transition">Community</a></li>
+      <li><a href="index.html#contact" class="text-gray-700 hover:text-amber-500 font-medium transition">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <section class="bg-gray-50 py-4">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <nav class="text-base">
+        <ol class="flex items-center space-x-2">
+          <li><a href="index.html" class="text-gray-500 hover:text-amber-500 transition">Home</a></li>
+          <li class="text-gray-400">/</li>
+          <li class="text-amber-500 font-medium">Keranjang</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Cart Content -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-8 text-center">Keranjang Berlangganan</h1>
+      <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Berlangganan Premium - Rp 19.000/bulan</h2>
+        <p class="text-gray-700 mb-6">Dapatkan akses ke semua fitur premium CookMate untuk pengalaman memasak yang lebih menyenangkan!</p>
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Video tutorial HD tanpa batas untuk semua resep</span>
+          </div>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Resep eksklusif dari chef profesional</span>
+          </div>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Menu planner otomatis untuk perencanaan masak</span>
+          </div>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Download resep untuk akses offline</span>
+          </div>
+          <div class="flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-gray-700">Akses komunitas premium untuk tips eksklusif</span>
+          </div>
+        </div>
+        <div class="mt-8 flex space-x-4">
+          <a href="pembayaran.html" class=" w-full flex-1 bg-amber-500 text-white py-3 rounded-lg hover:bg-amber-600 transition font-semibold text-center focus:ring-2 focus:ring-amber-300">
+            Lanjut ke Pembayaran
+          </a>
+          <a href="index.html" class="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition focus:ring-2 focus:ring-gray-300">
+            Kembali
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 sm:py-10 px-4 sm:px-8">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-lg sm:text-xl font-bold text-amber-500 mb-4">CookMate</h3>
+        <p class="text-gray-300 text-sm sm:text-base">Your ultimate cooking companion for finding, sharing, and creating delicious recipes.</p>
+      </div>
+      
+      <div>
+        <h4 class="text-base sm:text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#home" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Home</a></li>
+          <li><a href="#testimoni" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Testimoni</a></li>
+          <li><a href="#features" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Features</a></li>
+          <li><a href="#community" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Community</a></li>
+          <li><a href="#contact" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-base sm:text-lg font-semibold mb-4">Connect With Us</h4>
+        <div class="flex flex-wrap gap-4">
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Facebook</a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Twitter</a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Instagram</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+      <p>&copy; 2025 CookMate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>
