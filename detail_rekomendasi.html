@@ -5,24 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nasi Gudeg Yogya - CookMate</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="output.css" rel="stylesheet">
 </head>
 <body class="font-sans bg-white scroll-smooth">
   <!-- Header -->
-  <header class="flex justify-between items-center px-4 sm:px-8 py-4 bg-white shadow-lg sticky top-0 w-full z-50">
+  <header class="flex justify-between items-center px-4 sm:px-6 py-4 bg-white shadow-md sticky top-0 w-full z-50">
     <div class="flex items-center">
-      <h1 class="text-2xl font-bold text-amber-500"><a href="index.html" class="hover:text-amber-600 transition">CookMate</a></h1>
+      <h1 class="text-2xl font-bold text-amber-500">
+        <a href="index.html" class="hover:text-amber-600 transition">CookMate</a>
+      </h1>
       <button id="mobile-menu-button" class="ml-4 text-gray-700 md:hidden focus:outline-none focus:ring-2 focus:ring-amber-300 rounded">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-          <nav class="hidden md:block ml-6">
-        <ul class="flex space-x-4">
-          <li><a href="#testimoni" class="text-gray-700 hover:text-amber-500 font-medium">Testimoni</a></li>
-          <li><a href="#features" class="text-gray-700 hover:text-amber-500 font-medium">Features</a></li>
-          <li><a href="#community" class="text-gray-700 hover:text-amber-500 font-medium">Community</a></li>
-          <li><a href="#contact" class="text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
+      <nav class="hidden md:block ml-6">
+        <ul class="flex space-x-6">
+          <li><a href="#testimoni" class="text-sm text-gray-700 hover:text-amber-500 font-medium transition">Testimoni</a></li>
+          <li><a href="#features" class="text-sm text-gray-700 hover:text-amber-500 font-medium transition">Features</a></li>
+          <li><a href="#community" class="text-sm text-gray-700 hover:text-amber-500 font-medium transition">Community</a></li>
+          <li><a href="#contact" class="text-sm text-gray-700 hover:text-amber-500 font-medium transition">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -30,19 +33,19 @@
 
   <!-- Mobile Menu -->
   <nav id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-    <ul class="flex flex-col space-y-2 p-4">
-      <li><a href="rekomendasi.html" class="text-amber-500 font-medium hover:text-amber-600 transition">Resep</a></li>
-      <li><a href="artikel.html" class="text-gray-700 hover:text-amber-500 font-medium transition">Artikel</a></li>
-      <li><a href="products.html" class="text-gray-700 hover:text-amber-500 font-medium transition">Produk</a></li>
-      <li><a href="index.html#community" class="text-gray-700 hover:text-amber-500 font-medium transition">Community</a></li>
-      <li><a href="index.html#contact" class="text-gray-700 hover:text-amber-500 font-medium transition">Contact</a></li>
+    <ul class="flex flex-col space-y-3 p-4">
+      <li><a href="rekomendasi.html" class="text-sm text-amber-500 font-medium hover:text-amber-600 transition">Resep</a></li>
+      <li><a href="artikel.html" class="text-sm text-gray-700 hover:text-amber-500 font-medium transition">Artikel</a></li>
+      <li><a href="products.html" class="text-sm text-gray-700 hover:text-amber-500 font-medium transition">Produk</a></li>
+      <li><a href="index.html#community" class="text-sm text-gray-700 hover:text-amber-500 font-medium transition">Community</a></li>
+      <li><a href="index.html#contact" class="text-sm text-gray-700 hover:text-amber-500 font-medium transition">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Breadcrumb -->
-  <section class="bg-gray-50 py-4">
-    <div class="max-w-6xl mx-auto px-4 sm:px-8">
-      <nav class="text-base">
+  <section class="bg-white py-3">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <nav class="text-sm">
         <ol class="flex items-center space-x-2">
           <li><a href="index.html" class="text-gray-500 hover:text-amber-500 transition">Home</a></li>
           <li class="text-gray-400">/</li>
@@ -56,14 +59,16 @@
 
   <!-- Chef Info -->
   <section class="py-4 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-8">
-      <div class="flex items-center p-3 bg-gray-50 rounded-lg shadow-sm">
-        <img src="https://i.pinimg.com/736x/01/61/6b/01616b7daa1d2ef8846022bffc253d68.jpg" alt="Chef Sarah" class="w-10 h-10 rounded-full mr-3">
-        <div>
-          <h3 class="font-semibold text-gray-800 text-sm">Chef Sarah</h3>
-          <p class="text-xs text-gray-600">Culinary Expert • 156 resep</p>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+        <div class="flex items-center">
+          <img src="https://i.pinimg.com/736x/01/61/6b/01616b7daa1d2ef8846022bffc253d68.jpg" alt="Chef Sarah" class="w-10 h-10 rounded-full mr-3 object-cover">
+          <div>
+            <h3 class="font-semibold text-gray-800 text-sm">Chef Sarah</h3>
+            <p class="text-xs text-gray-600">Culinary Expert • 156 resep</p>
+          </div>
         </div>
-        <button class="ml-auto px-3 py-1 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition focus:ring-2 focus:ring-amber-300 text-xs">
+        <button class="px-3 py-1 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition focus:ring-2 focus:ring-amber-300 text-xs font-medium">
           Follow
         </button>
       </div>
@@ -71,40 +76,40 @@
   </section>
 
   <!-- Recipe Header -->
-  <section class="py-8 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+  <section class="py-6 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Recipe Image -->
-        <div>
+        <div class="flex flex-col">
           <div class="relative mb-4">
-            <img src="public/assets/gudeg.jpg" alt="Nasi Gudeg Yogya" class="w-full h-96 object-cover rounded-xl shadow-lg">
-            <div class="absolute top-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm font-medium">
+            <img src="public/assets/gudeg.jpg" alt="Nasi Gudeg Yogya" class="w-full h-80 object-cover rounded-xl shadow-md">
+            <div class="absolute top-3 left-3 bg-black/70 text-white px-2 py-1 rounded-full text-xs font-medium">
               🔥 Trending
             </div>
-            <div class="absolute top-4 right-4 bg-white/90 px-3 py-1 rounded-full text-sm font-medium flex items-center">
-              <span>⭐⭐⭐⭐⭐</span>
-              <span class="ml-1">4.8</span>
+            <div class="absolute top-3 right-3 bg-white/90 px-2 py-1 rounded-full text-sm font-medium flex items-center">
+              <span class="text-yellow-400">⭐ 4.8</span>
             </div>
           </div>
-          <!-- Video Tutorial Thumbnail & Nutrition Info -->
-          <div class="flex flex-col lg:flex-row gap-4">
-            <div class="relative flex-1">
-              <button onclick="showVideoCard()" class="w-full h-24 bg-black/30 rounded-lg flex items-center justify-center backdrop-blur-sm hover:bg-black/40 transition focus:outline-none focus:ring-2 focus:ring-amber-300">
-                <div class="text-center">
-                  <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="py-6 relative flex-1">
+              <div class="relative w-60 mx-auto">
+                <button onclick="showVideoCard()" class="w-full h-24">
+                  <img src="public/assets/gudeg.jpg" alt="Nasi Gudeg Yogya" class="w-full h-24 object-cover shadow-md rounded-lg hover:opacity-90 transition">
+                  <div class="absolute top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/2">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
                   </div>
-                  <p class="text-xs text-white/75">Video Tutorial 25 menit</p>
-                </div>
-              </button>
-              <!-- Video Card (Hidden by default) -->
-              <div id="videoCard" class="hidden-fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-                <div class="bg-white rounded-xl shadow-xl p-4 sm:p-6 max-w-lg w-full mx-4 transform transition-all duration-300">
+                </button>
+                <p class="text-xs text-white/90 text-center mt-2">Tutorial Nasi Gudeg Yogya mudah dan praktis</p>
+              </div>
+              <div id="videoCard" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+                <div class="bg-white rounded-xl shadow-xl p-4 sm:p-6 max-w-md w-full mx-4">
                   <h3 class="text-base font-bold text-gray-800 mb-2">🎥 Video Tutorial Premium</h3>
                   <p class="text-gray-700 text-sm mb-4">Akses video tutorial langkah demi langkah untuk memasak gudeg autentik dengan berlangganan premium.</p>
-                  <a href="keranjang.html" class="w-full block bg-amber-500 text-white py-2 rounded-lg hover:bg-amber-600 transition font-semibold text-center focus:ring-2 focus:ring-amber-300">
+                  <a href="keranjang.html" class="block w-full bg-amber-500 text-white py-2 rounded-lg hover:bg-amber-600 transition font-semibold text-center focus:ring-2 focus:ring-amber-300">
                     Berlangganan Sekarang
                   </a>
                   <button onclick="hideVideoCard()" class="w-full mt-2 border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50 transition focus:ring-2 focus:ring-gray-300 text-sm">
@@ -113,27 +118,26 @@
                 </div>
               </div>
             </div>
-            <!-- Nutrition Info -->
-            <div class="bg-white rounded-lg shadow-sm p-4 flex-1">
+            <div class="bg-gray-50 rounded-lg shadow-sm p-4 flex-1">
               <h3 class="text-base font-bold text-gray-800 mb-3">📊 Informasi Gizi</h3>
-              <div class="space-y-2">
-                <div class="flex justify-between text-sm">
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="flex justify-between">
                   <span class="text-gray-600">Kalori</span>
                   <span class="font-semibold">450 kcal</span>
                 </div>
-                <div class="flex justify-between text-sm">
+                <div class="flex justify-between">
                   <span class="text-gray-600">Protein</span>
                   <span class="font-semibold">12g</span>
                 </div>
-                <div class="flex justify-between text-sm">
+                <div class="flex justify-between">
                   <span class="text-gray-600">Karbohidrat</span>
                   <span class="font-semibold">65g</span>
                 </div>
-                <div class="flex justify-between text-sm">
+                <div class="flex justify-between">
                   <span class="text-gray-600">Lemak</span>
                   <span class="font-semibold">18g</span>
                 </div>
-                <div class="flex justify-between text-sm">
+                <div class="flex justify-between">
                   <span class="text-gray-600">Serat</span>
                   <span class="font-semibold">8g</span>
                 </div>
@@ -152,7 +156,7 @@
             <div class="flex text-yellow-400 mr-2">
               <span>⭐⭐⭐⭐⭐</span>
             </div>
-            <span class=" text-gray-600 text-sm">(4.8) 1,234 reviews</span>
+            <span class="text-gray-600 text-sm">(4.8) 1,234 reviews</span>
             <span class="mx-2 text-gray-400">•</span>
             <span class="text-gray-600 text-sm">❤️ 2,156 saves</span>
           </div>
@@ -161,35 +165,33 @@
             santan kelapa, dan bumbu rempah tradisional yang kaya akan cita rasa. Disajikan dengan nasi hangat, 
             ayam kampung, telur, dan sambal krecek.
           </p>
-          <!-- Recipe Stats -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-            <div class="text-center p-3 bg-gray-50 rounded-lg hover:transform hover:-translate-y-1 transition">
+          <div class="grid grid-cols-2 gap-3 mb-6">
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
               <div class="text-xl mb-1">⏱️</div>
               <p class="text-xs text-gray-600">Waktu Masak</p>
               <p class="font-semibold text-sm">45 menit</p>
             </div>
-            <div class="text-center p-3 bg-gray-50 rounded-lg hover:transform hover:-translate-y-1 transition">
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
               <div class="text-xl mb-1">👨‍🍳</div>
               <p class="text-xs text-gray-600">Tingkat</p>
               <p class="font-semibold text-sm">Medium</p>
             </div>
-            <div class="text-center p-3 bg-gray-50 rounded-lg hover:transform hover:-translate-y-1 transition">
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
               <div class="text-xl mb-1">🍽️</div>
               <p class="text-xs text-gray-600">Porsi</p>
               <p class="font-semibold text-sm">4 orang</p>
             </div>
-            <div class="text-center p-3 bg-gray-50 rounded-lg hover:transform hover:-translate-y-1 transition">
+            <div class="text-center p-3 bg-gray-50 rounded-lg">
               <div class="text-xl mb-1">🔥</div>
               <p class="text-xs text-gray-600">Kalori</p>
               <p class="font-semibold text-sm">450 kcal</p>
             </div>
           </div>
-          <!-- Action Buttons -->
           <div class="flex space-x-3 mb-4">
-            <button class="flex-1 bg-amber-500 text-white py-2 rounded-lg hover:bg-amber-600 transition font-semibold text-base focus:ring-2 focus:ring-amber-300" onclick="saveRecipe()">
+            <button class="flex-1 border border-gray-300 text-gray-700 py-2 rounded-lg hover:bg-gray-50 transition focus:ring-2 focus:ring-gray-300 text-sm outline-gray-500" onclick="saveRecipe()">
               ❤️ Simpan Resep
             </button>
-            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition focus:ring-2 focus:ring-gray-300 text-base" onclick="shareRecipe()">
+            <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition focus:ring-2 focus:ring-gray-300 text-sm" onclick="shareRecipe()">
               📤 Bagikan
             </button>
           </div>
@@ -200,7 +202,7 @@
 
   <!-- Recipe Content -->
   <section class="py-6">
-    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <!-- Main Content -->
         <div class="lg:col-span-2">
@@ -209,68 +211,68 @@
             <h2 class="text-xl font-bold text-gray-800 mb-4">🥘 Bahan-bahan</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <h3 class="text-base font-semibold text-gray-800 mb-3">Bahan Utama:</h3>
+                <h3 class="text-base font-semibold text-gray-800 mb-3">Bahan Utama</h3>
                 <ul class="space-y-2">
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">500g nangka muda, potong dadu</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">500g nangka muda, potong dadu</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">400ml santan kelapa</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">400ml santan kelapa</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">2 lembar daun salam</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">2 lembar daun salam</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">3 lembar daun jeruk</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">3 lembar daun jeruk</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">2 batang serai, memarkan</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">2 batang serai, memarkan</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">2 sdm gula merah, sisir</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">2 sdm gula merah, sisir</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">1 sdt garam</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">1 sdt garam</span>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 class="text-base font-semibold text-gray-800 mb-3">Bumbu Halus:</h3>
+                <h3 class="text-base font-semibold text-gray-800 mb-3">Bumbu Halus</h3>
                 <ul class="space-y-2">
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">8 siung bawang merah</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">8 siung bawang merah</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">4 siung bawang putih</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">4 siung bawang putih</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">3 buah cabai merah</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">3 buah cabai merah</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">2 cm jahe</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">2 cm jahe</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">3 cm lengkuas</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">3 cm lengkuas</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">1 sdt ketumbar</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">1 sdt ketumbar</span>
                   </li>
                   <li class="flex items-center">
-                    <input type="checkbox" class="mr-2">
-                    <span class="text-sm">3 buah kemiri</span>
+                    <input type="checkbox" class="mr-2 h-4 w-4 text-amber-500 focus:ring-amber-300">
+                    <span class="text-sm text-gray-700">3 buah kemiri</span>
                   </li>
                 </ul>
               </div>
@@ -279,44 +281,49 @@
           <!-- Instructions -->
           <div class="bg-white rounded-xl shadow-md p-4 sm:p-6 mb-6">
             <h2 class="text-xl font-bold text-gray-800 mb-4">👩‍🍳 Cara Memasak</h2>
-            <div class="space-y-3">
-              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
-                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">1</div>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm flex-shrink-0">1</div>
                 <div>
                   <h3 class="font-semibold text-sm text-gray-800 mb-1">Persiapan Bumbu</h3>
                   <p class="text-sm text-gray-700">Haluskan semua bumbu halus menggunakan blender atau cobek hingga benar-benar halus dan tercampur rata.</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
-                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">2</div>
+              
+              <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm flex-shrink-0">2</div>
                 <div>
                   <h3 class="font-semibold text-sm text-gray-800 mb-1">Tumis Bumbu</h3>
                   <p class="text-sm text-gray-700">Panaskan minyak dalam wajan, tumis bumbu halus bersama daun salam, daun jeruk, dan serai hingga harum dan matang.</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
-                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">3</div>
+              
+              <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm flex-shrink-0">3</div>
                 <div>
                   <h3 class="font-semibold text-sm text-gray-800 mb-1">Masak Nangka</h3>
                   <p class="text-sm text-gray-700">Masukkan potongan nangka muda, aduk rata dengan bumbu. Masak hingga nangka mulai empuk, sekitar 10 menit.</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
-                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">4</div>
+              
+              <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm flex-shrink-0">4</div>
                 <div>
                   <h3 class="font-semibold text-sm text-gray-800 mb-1">Tambahkan Santan</h3>
                   <p class="text-sm text-gray-700">Tuang santan kelapa, tambahkan gula merah dan garam. Aduk perlahan dan masak dengan api kecil.</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
-                <div class="w-7 h-7 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm">5</div>
+              
+              <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-8 h-8 bg-amber-500 text-white rounded-full flex items-center justify-center font-medium text-sm flex-shrink-0">5</div>
                 <div>
                   <h3 class="font-semibold text-sm text-gray-800 mb-1">Masak Hingga Matang</h3>
                   <p class="text-sm text-gray-700">Lanjutkan memasak dengan api kecil selama 20-25 menit hingga santan mengental dan bumbu meresap sempurna. Aduk sesekali agar tidak gosong.</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-2 hover:bg-gray-50 p-1 rounded-lg transition">
-                <div class="w-7 h-7 bg-green-500 text-white rounded-full flex items-center justify-center font-medium text-sm">✓</div>
+              
+              <div class="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition">
+                <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-medium text-sm flex-shrink-0">✓</div>
                 <div>
                   <h3 class="font-semibold text-sm text-gray-800 mb-1">Sajikan</h3>
                   <p class="text-sm text-gray-700">Gudeg siap disajikan dengan nasi hangat, ayam kampung, telur, dan sambal krecek. Nikmati selagi hangat!</p>
@@ -327,19 +334,31 @@
           <!-- Tips -->
           <div class="bg-amber-50 border-l-4 border-amber-500 p-4 sm:p-6 mb-6 rounded-lg">
             <h3 class="text-base font-semibold text-amber-800 mb-2">💡 Tips Chef</h3>
-            <ul class="space-y-1 text-amber-700 text-sm">
-              <li>• Pilih nangka muda yang masih segar untuk tekstur yang lebih baik</li>
-              <li>• Gunakan santan kelapa segar untuk rasa yang lebih autentik</li>
-              <li>• Masak dengan api kecil agar santan tidak pecah</li>
-              <li>• Gudeg akan lebih enak jika didiamkan semalaman sebelum disajikan</li>
+            <ul class="space-y-2 text-amber-700 text-sm">
+              <li class="flex items-start">
+                <span class="mr-2">•</span>
+                <span>Pilih nangka muda yang masih segar untuk tekstur yang lebih baik.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">•</span>
+                <span>Gunakan santan kelapa segar untuk rasa yang lebih autentik.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">•</span>
+                <span>Masak dengan api kecil agar santan tidak pecah.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="mr-2">•</span>
+                <span>Gudeg akan lebih enak jika didiamkan semalaman sebelum disajikan.</span>
+              </li>
             </ul>
           </div>
           <!-- Reviews -->
           <div class="bg-white rounded-xl shadow-md p-4 sm:p-6">
             <h2 class="text-xl font-bold text-gray-800 mb-4">⭐ Review (1,234)</h2>
             <div class="space-y-4">
-              <div class="flex items-start space-x-3 hover:bg-gray-50 p-1 rounded-lg transition">
-                <img src="https://i.pinimg.com/736x/83/5e/0f/835e0f0b83da64eb3ec31fd9944ef00d.jpg" alt="User" class="w-8 h-8 rounded-full">
+              <div class="flex items-start space-x-3 p-2 rounded-lg hover:bg-gray-50 transition">
+                <img src="https://i.pinimg.com/736x/83/5e/0f/835e0f0b83da64eb3ec31fd9944ef00d.jpg" alt="User" class="w-8 h-8 rounded-full object-cover">
                 <div class="flex-grow">
                   <div class="flex items-center space-x-2 mb-1">
                     <h4 class="font-semibold text-gray-800 text-sm">Jennie</h4>
@@ -347,14 +366,14 @@
                     <span class="text-xs text-gray-500">2 hari lalu</span>
                   </div>
                   <p class="text-gray-700 text-sm">Resep yang sangat detail dan mudah diikuti! Gudeg saya jadi enak banget, keluarga sampai minta dimasak lagi. Terima kasih Chef Sarah! 😊</p>
-                  <div class="flex items-center space-x-3 mt-1">
+                  <div class="flex items-center space-x-3 mt-2">
                     <button class="text-xs text-gray-500 hover:text-amber-500 transition focus:ring-2 focus:ring-amber-300">👍 24</button>
                     <button class="text-xs text-gray-500 hover:text-amber-500 transition focus:ring-2 focus:ring-amber-300">Balas</button>
                   </div>
                 </div>
               </div>
-              <div class="flex items-start space-x-3 hover:bg-gray-50 p-1 rounded-lg transition">
-                <img src="https://i.pinimg.com/736x/41/01/9b/41019b8a921a316445966ccc9ba84919.jpg" alt="User" class="w-8 h-8 rounded-full">
+              <div class="flex items-start space-x-3 p-2 rounded-lg hover:bg-gray-50 transition">
+                <img src="https://i.pinimg.com/736x/41/01/9b/41019b8a921a316445966ccc9ba84919.jpg" alt="User" class="w-8 h-8 rounded-full object-cover">
                 <div class="flex-grow">
                   <div class="flex items-center space-x-2 mb-1">
                     <h4 class="font-semibold text-gray-800 text-sm">Amanda</h4>
@@ -362,7 +381,7 @@
                     <span class="text-xs text-gray-500">1 minggu lalu</span>
                   </div>
                   <p class="text-gray-700 text-sm">Pertama kali masak gudeg dan berhasil! Video tutorialnya sangat membantu, step by step jelas banget. Worth it berlangganan premium!</p>
-                  <div class="flex items-center space-x-3 mt-1">
+                  <div class="flex items-center space-x-3 mt-2">
                     <button class="text-xs text-gray-500 hover:text-amber-500 transition focus:ring-2 focus:ring-amber-300">👍 18</button>
                     <button class="text-xs text-gray-500 hover:text-amber-500 transition focus:ring-2 focus:ring-amber-300">Balas</button>
                   </div>
@@ -377,44 +396,44 @@
           </div>
         </div>
         <!-- Sidebar -->
-        <div class="lg:col-span-1 lg:sticky lg:top-24 space-y-4">
+        <div class="lg:col-span-1 space-y-6 lg:sticky lg:top-24">
           <!-- Related Recipes -->
-          <div class="bg-white rounded-lg shadow-sm p-4">
+          <div class="bg-white rounded-xl shadow-md p-4">
             <h3 class="text-base font-bold text-gray-800 mb-3">🍽️ Resep Terkait</h3>
-            <div class="space-y-2">
-              <div class="flex items-start space-x-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
-                <img src="public/assets/rendang.jpg" alt="Rendang" class="w-12 h-14 object-cover rounded">
+            <div class="space-y-3">
+              <div class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                <img src="public/assets/rendang.jpg" alt="Rendang" class="w-12 h-12 object-cover rounded">
                 <div class="flex-grow">
-                  <h4 class="font-semibold text-sm text-gray-800 mb-1">Rendang Daging Sapi</h4>
-                  <div class="flex text-yellow-400 text-xs mb-0.5">⭐⭐⭐⭐⭐</div>
-                  <p class="text-xs text-gray-500">2 jam • Medium</p>
+                  <h4 class="font-semibold text-sm text-gray-800">Rendang Daging Sapi</h4>
+                  <div class="flex text-yellow-400 text-xs mt-1">⭐⭐⭐⭐⭐</div>
+                  <p class="text-xs text-gray-500 mt-1">2 jam • Medium</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
-                <img src="public/assets/gadogado.jpg" alt="Gado-gado" class="w-12 h-14 object-cover rounded">
+              <div class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                <img src="public/assets/gadogado.jpg" alt="Gado-gado" class="w-12 h-12 object-cover rounded">
                 <div class="flex-grow">
-                  <h4 class="font-semibold text-sm text-gray-800 mb-1">Gado-gado</h4>
-                  <div class="flex text-yellow-400 text-xs mb-0.5">⭐⭐⭐⭐</div>
-                  <p class="text-xs text-gray-500">25 min • Easy</p>
+                  <h4 class="font-semibold text-sm text-gray-800">Gado-gado</h4>
+                  <div class="flex text-yellow-400 text-xs mt-1">⭐⭐⭐⭐</div>
+                  <p class="text-xs text-gray-500 mt-1">25 min • Easy</p>
                 </div>
               </div>
-              <div class="flex items-start space-x-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
-                <img src="public/assets/bubur.jpg" alt="Bubur Ayam" class="w-12 h-14 object-cover rounded">
+              <div class="flex items-start space-x-3 cursor-pointer hover:bg-gray-50 p-2 rounded transition">
+                <img src="public/assets/bubur.jpg" alt="Bubur Ayam" class="w-12 h-12 object-cover rounded">
                 <div class="flex-grow">
-                  <h4 class="font-semibold text-sm text-gray-800 mb-1">Bubur Ayam Betawi</h4>
-                  <div class="flex text-yellow-400 text-xs mb-0.5">⭐⭐⭐⭐</div>
-                  <p class="text-xs text-gray-500">40 min • Medium</p>
+                  <h4 class="font-semibold text-sm text-gray-800">Bubur Ayam Betawi</h4>
+                  <div class="flex text-yellow-400 text-xs mt-1">⭐⭐⭐⭐</div>
+                  <p class="text-xs text-gray-500 mt-1">40 min • Medium</p>
                 </div>
               </div>
             </div>
           </div>
           <!-- Shopping List -->
-          <div class="bg-white rounded-lg shadow-sm p-4">
-            <h3 class="text-base font-bold text-gray-800 mb-2">🛒 Beli Bahan</h3>
-            <p class="text-sm text-gray-600 mb-3">Dapatkan bahan-bahan segar untuk resep ini</p>
-            <button class="w-full py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition font-semibold text-sm focus:ring-2 focus:ring-amber-300" onclick="window.location.href='products.html'">
-              Belanja Sekarang
-            </button>
+          <div class="mt-8 bg-amber-50 rounded-xl p-6 text-gray-800">
+            <h3 class="text-base font-bold mb-2">Upgrade ke Premium</h3>
+            <p class="text-sm opacity-90 mb-4">Akses ribuan resep eksklusif dan video tutorial HD dari chef profesional.</p>
+            <a href="keranjang.html" class="block w-full bg-amber-500 text-white text-center py-2 rounded-lg hover:bg-amber-600 text-sm font-medium transition">
+              Coba 7 Hari Gratis
+            </a>
           </div>
         </div>
       </div>
@@ -422,38 +441,88 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8 sm:py-10 px-4 sm:px-8">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  <footer class="bg-gray-800 text-white py-8 px-4 sm:px-8 mt-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <div>
-        <h3 class="text-lg sm:text-xl font-bold text-amber-500 mb-4">CookMate</h3>
-        <p class="text-gray-300 text-sm sm:text-base">Your ultimate cooking companion for finding, sharing, and creating delicious recipes.</p>
+        <h3 class="text-lg font-bold text-amber-500 mb-4">CookMate</h3>
+        <p class="text-gray-300 text-sm">Platform kuliner terlengkap di Indonesia. Temukan resep, tips memasak, dan inspirasi kuliner dari seluruh dunia.</p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="text-gray-300 hover:text-amber-500 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+              <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-amber-500 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+              <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+            </svg>
+          </a>
+        </div>
       </div>
       
       <div>
-        <h4 class="text-base sm:text-lg font-semibold mb-4">Quick Links</h4>
+        <h4 class="text-base font-semibold text-gray-200 mb-4">Kategori</h4>
         <ul class="space-y-2">
-          <li><a href="#home" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Home</a></li>
-          <li><a href="#testimoni" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Testimoni</a></li>
-          <li><a href="#features" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Features</a></li>
-          <li><a href="#community" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Community</a></li>
-          <li><a href="#contact" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Contact</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-amber-500 text-sm transition">Resep Masakan</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-amber-500 text-sm transition">Tips & Trik</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-amber-500 text-sm transition">Kuliner Daerah</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-amber-500 text-sm transition">Masakan Internasional</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-amber-500 text-sm transition">Healthy Food</a></li>
         </ul>
       </div>
       
       <div>
-        <h4 class="text-base sm:text-lg font-semibold mb-4">Connect With Us</h4>
-        <div class="flex flex-wrap gap-4">
-          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Facebook</a>
-          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Twitter</a>
-          <a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Instagram</a>
-        </div>
+        <h4 class="text-base font-semibold text-gray-200 mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-300 hover:text-amber-500 text-sm transition">Home</a></li>
+          <li><a href="rekomendasi.html" class="text-gray-300 hover:text-amber-500 text-sm transition">Resep</a></li>
+          <li><a href="artikel.html" class="text-gray-300 hover:text-amber-500 text-sm transition">Artikel</a></li>
+          <li><a href="products.html" class="text-gray-300 hover:text-amber-500 text-sm transition">Produk</a></li>
+          <li><a href="index.html#contact" class="text-gray-300 hover:text-amber-500 text-sm transition">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-base font-semibold text-gray-200 mb-4">Hubungi Kami</h4>
+        <ul class="space-y-2">
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span class="text-gray-300 text-sm">Jl. Sudirman No. 123, Jakarta Pusat</span>
+          </li>
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span class="text-gray-300 text-sm">info@cookmate.id</span>
+          </li>
+          <li class="flex items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-500 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span class="text-gray-300 text-sm">+62 812-3456-7890</span>
+          </li>
+        </ul>
       </div>
     </div>
     
     <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
-      <p>&copy; 2025 CookMate. All rights reserved.</p>
+      <p>© 2025 CookMate. All rights reserved.</p>
     </div>
   </footer>
+
 
   <script>
     function saveRecipe() {
@@ -474,22 +543,19 @@
     }
 
     function showVideoCard() {
-      document.getElementById('videoCard').classList.remove('hidden');
-      document.getElementById('videoCard').classList.add('opacity-100', 'scale-100');
+      const card = document.getElementById('videoCard');
+      card.classList.remove('hidden');
     }
 
     function hideVideoCard() {
       const card = document.getElementById('videoCard');
-      card.classList.remove('opacity-100', 'scale-100');
-      card.classList.add('opacity-0', 'scale-95');
-      setTimeout(() => card.classList.add('hidden'), 300);
+      card.classList.add('hidden');
     }
 
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-
     if (mobileMenuButton && mobileMenu) {
-      mobileMenuButton.addEventListener('click', function() {
+      mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
       });
     }
