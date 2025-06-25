@@ -4,15 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Popular Recipes Today - CookMate</title>
-  <link href="output.css" rel="stylesheet">
+  <!-- Use TailwindCSS v3 for better compatibility with line-clamp -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Add the line-clamp plugin utility classes */
+    @layer utilities {
+      .line-clamp-1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      }
+      .line-clamp-2 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      .line-clamp-3 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+    }
+  </style>
 </head>
-<body class="font-sans bg-white scroll-smooth">
+<body class="font-sans bg-gray-50 scroll-smooth">
 
   <!-- Header -->
-  <header class="flex justify-between items-center px-4 sm:px-8 py-4 bg-white shadow-md sticky top-0 w-full z-50">
+  <header class="flex justify-between items-center px-4 sm:px-8 py-4 bg-white shadow-md sticky top-0 w-full z-50 transition-all duration-300">
     <!-- Left Navigation -->
     <div class="flex items-center">
-      <h1 class="text-2xl font-bold text-amber-500"><a href="index.html">CookMate</a></h1>
+      <h1 class="text-2xl font-bold text-amber-500"><a href="#">CookMate</a></h1>
       <!-- Mobile Menu Button -->
       <button id="mobile-menu-button" class="ml-4 text-gray-700 md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -20,36 +44,36 @@
         </svg>
       </button>
       <nav class="hidden md:block ml-6">
-  <ul class="flex space-x-4">
-    <li><a href="index.html#testimoni" class="block text-gray-700 hover:text-amber-500 font-medium">Testimoni</a></li>
-      <li><a href="index.html#features" class="block text-gray-700 hover:text-amber-500 font-medium">Features</a></li>
-      <li><a href="index.html#community" class="block text-gray-700 hover:text-amber-500 font-medium">Community</a></li>
-      <li><a href="index.html#contact" class="block text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
-  </ul>
-</nav>
+        <ul class="flex space-x-4">
+          <li><a href="#testimoni" class="block text-gray-700 hover:text-amber-500 font-medium">Testimoni</a></li>
+          <li><a href="#features" class="block text-gray-700 hover:text-amber-500 font-medium">Features</a></li>
+          <li><a href="#community" class="block text-gray-700 hover:text-amber-500 font-medium">Community</a></li>
+          <li><a href="#contact" class="block text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
+        </ul>
+      </nav>
     </div>
     <div>
-      <a href="index.html#login" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Login</a>
+      <a href="#login" class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition">Login</a>
     </div>
   </header>
 
   <!-- Mobile Navigation Menu (Hidden by default) -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-4 px-4 sm:px-8 absolute w-full z-40">
+  <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md py-4 px-4 sm:px-8 fixed w-full z-40 top-16">
     <ul class="space-y-4">
-      <li><a href="index.html#testimoni" class="block text-gray-700 hover:text-amber-500 font-medium">Testimoni</a></li>
-      <li><a href="index.html#features" class="block text-gray-700 hover:text-amber-500 font-medium">Features</a></li>
-      <li><a href="index.html#community" class="block text-gray-700 hover:text-amber-500 font-medium">Community</a></li>
-      <li><a href="index.html#contact" class="block text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
+      <li><a href="#testimoni" class="block text-gray-700 hover:text-amber-500 font-medium">Testimoni</a></li>
+      <li><a href="#features" class="block text-gray-700 hover:text-amber-500 font-medium">Features</a></li>
+      <li><a href="#community" class="block text-gray-700 hover:text-amber-500 font-medium">Community</a></li>
+      <li><a href="#contact" class="block text-gray-700 hover:text-amber-500 font-medium">Contact</a></li>
     </ul>
   </div>
 
   <!-- Hero Section -->
-  <section class="py-16 bg-amber-500 text-white pt-30 sm:pt-28 pb-20 sm:pb-24 text-center">
+  <section class="py-16 bg-amber-500 text-white pt-24 sm:pt-28 pb-20 sm:pb-24 text-center">
     <div class="max-w-6xl mx-auto px-4 sm:px-8">
       <div class="max-w-4xl mx-auto">
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-tight">Popular Recipes Today</h1>
         <p class="text-lg sm:text-xl mb-12 opacity-90 leading-relaxed max-w-2xl mx-auto">Discover the most loved recipes by our community today</p>
-        <div class="bg-amber-500 bg-opacity-20 px-6 sm:px-8 py-3 sm:py-4 rounded-full inline-block backdrop-blur-md">
+        <div class="bg-black bg-opacity-20 px-6 sm:px-8 py-3 sm:py-4 rounded-full inline-block backdrop-blur-md">
           <span class="font-medium mr-2">Today's Date:</span>
           <span class="font-bold" id="current-date"></span>
         </div>
@@ -58,18 +82,18 @@
   </section>
 
   <!-- Filter Section -->
-  <section class="bg-white py-8 shadow-sm">
+  <section class="bg-white py-8 shadow-sm sticky top-[72px] z-30">
     <div class="max-w-6xl mx-auto px-4 sm:px-8">
       <div class="text-center mb-6">
         <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Filter by Category</h3>
       </div>
-      <div class="flex justify-center gap-4 sm:gap-6 flex-wrap">
-        <button class="filter-btn active px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-amber-500 border-amber-500 text-white text-sm sm:text-base" data-category="all">All Recipes</button>
-        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-50 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="breakfast">Breakfast</button>
-        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-50 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="lunch">Lunch</button>
-        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-50 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="dinner">Dinner</button>
-        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-50 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="dessert">Dessert</button>
-        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-50 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="snack">Snack</button>
+      <div class="flex justify-center gap-2 sm:gap-4 flex-wrap">
+        <button class="filter-btn active px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-amber-500 border-amber-500 text-white text-sm sm:text-base" data-category="all">All</button>
+        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-100 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="breakfast">Breakfast</button>
+        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-100 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="lunch">Lunch</button>
+        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-100 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="dinner">Dinner</button>
+        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-100 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="dessert">Dessert</button>
+        <button class="filter-btn px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 border-2 bg-gray-100 border-gray-200 text-gray-600 hover:bg-amber-500 hover:border-amber-500 hover:text-white text-sm sm:text-base" data-category="snack">Snack</button>
       </div>
     </div>
   </section>
@@ -77,223 +101,34 @@
   <!-- Popular Recipes Section -->
   <section class="py-16 sm:py-20">
     <div class="max-w-6xl mx-auto px-4 sm:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-20">
+      <div id="recipe-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 mb-16 sm:mb-20">
         
-        <!-- Recipe Card 1 -->
-        <div class="recipe-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0 animate-fadeInUp" data-category="breakfast" data-recipe="gudeg" style="animation-delay: 0.1s;">
+        <!-- Recipe cards will be dynamically managed by JavaScript -->
+        <!-- Card Structure (for reference) -->
+        <div class="recipe-card flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0" data-category="breakfast" data-recipe="gudeg">
           <div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="public/assets/gudeg.jpg" alt="Nasi Gudeg Yogya" class="w-full h-full rounded-xl object-cover transition-transform duration-300 hover:scale-105" />
-            <div class="absolute top-2.5 left-2.5 bg-black/80 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              🔥 Trending
-            </div>
-            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              <span>⭐⭐⭐⭐⭐</span>
-              <span class="ml-1">4.8</span>
+            <img src="https://placehold.co/400x300/f59e0b/ffffff?text=Gudeg" alt="Nasi Gudeg Yogya" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
+            <div class="absolute top-2.5 left-2.5 bg-black/70 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">🔥 Trending</div>
+            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center">
+              <span class="text-yellow-400">⭐</span><span class="ml-1 font-semibold">4.8</span>
             </div>
           </div>
-          <div class="px-5 py-5 sm:px-6 sm:py-6 flex flex-col h-full">
-            <h3 class="text-lg sm:text-xl mb-3 text-gray-800 font-bold line-clamp-2 min-h-[3.5rem]">Nasi Gudeg Yogya</h3>
-            <p class="text-gray-600 mb-4 leading-6 text-sm sm:text-base line-clamp-3 flex-grow">Gudeg khas Yogyakarta dengan cita rasa manis dan gurih yang autentik</p>
-            <div class="flex flex-col gap-2 mb-4 text-xs sm:text-sm text-gray-600">
+          <div class="p-5 sm:p-6 flex-1 flex flex-col">
+            <h3 class="text-lg sm:text-xl mb-2 text-gray-800 font-bold line-clamp-2">Nasi Gudeg Yogya</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base line-clamp-3 flex-grow">Gudeg khas Yogyakarta dengan cita rasa manis dan gurih yang autentik, disajikan dengan nasi hangat, krecek, dan telur pindang.</p>
+            <div class="flex items-center gap-4 mb-4 text-xs sm:text-sm text-gray-600">
               <span>⏱️ 45 min</span>
               <span>👨‍🍳 Medium</span>
               <span>❤️ 1.2k</span>
             </div>
-            <div class="flex gap-2 flex-wrap mt-auto">
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Indonesian</span>
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Traditional</span>
+            <div class="flex gap-2 flex-wrap mt-auto pt-4 border-t border-gray-100">
+              <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs font-medium">Indonesian</span>
+              <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Traditional</span>
             </div>
           </div>
         </div>
-
-        <!-- Recipe Card 2 -->
-        <div class="recipe-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0 animate-fadeInUp" data-category="lunch" data-recipe="rendang" style="animation-delay: 0.2s;">
-          <div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="public/assets/rendang.jpg" alt="Rendang Daging" class="w-full h-full rounded-xl object-cover transition-transform duration-300 hover:scale-105" />
-            <div class="absolute top-2.5 left-2.5 bg-black/80 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              👑 Popular
-            </div>
-            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              <span>⭐⭐⭐⭐⭐</span>
-              <span class="ml-1">4.9</span>
-            </div>
-          </div>
-          <div class="px-5 py-5 sm:px-6 sm:py-6 flex flex-col h-full">
-            <h3 class="text-lg sm:text-xl mb-3 text-gray-800 font-bold line-clamp-2 min-h-[3.5rem]">Rendang Daging Sapi</h3>
-            <p class="text-gray-600 mb-4 leading-6 text-sm sm:text-base line-clamp-3 flex-grow">Rendang daging sapi dengan bumbu rempah yang kaya dan cita rasa yang mendalam</p>
-            <div class="flex flex-col gap-2 mb-4 text-xs sm:text-sm text-gray-600">
-              <span>⏱️ 2 hours</span>
-              <span>👨‍🍳 Hard</span>
-              <span>❤️ 2.1k</span>
-            </div>
-            <div class="flex gap-2 flex-wrap mt-auto">
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Indonesian</span>
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Spicy</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recipe Card 3 -->
-        <div class="recipe-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0 animate-fadeInUp" data-category="snack" data-recipe="pisang" style="animation-delay: 0.3s;">
-          <div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="public/assets/pisang.jpg" alt="Pisang Goreng Crispy" class="w-full h-full rounded-xl object-cover transition-transform duration-300 hover:scale-105" />
-            <div class="absolute top-2.5 left-2.5 bg-black/80 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              🆕 New
-            </div>
-            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              <span>⭐⭐⭐⭐</span>
-              <span class="ml-1">4.6</span>
-            </div>
-          </div>
-          <div class="px-5 py-5 sm:px-6 sm:py-6 flex flex-col h-full">
-            <h3 class="text-lg sm:text-xl mb-3 text-gray-800 font-bold line-clamp-2 min-h-[3.5rem]">Pisang Goreng Crispy</h3>
-            <p class="text-gray-600 mb-4 leading-6 text-sm sm:text-base line-clamp-3 flex-grow">Pisang goreng dengan lapisan tepung crispy yang renyah dan manis</p>
-            <div class="flex flex-col gap-2 mb-4 text-xs sm:text-sm text-gray-600">
-              <span>⏱️ 20 min</span>
-              <span>👨‍🍳 Easy</span>
-              <span>❤️ 856</span>
-            </div>
-            <div class="flex gap-2 flex-wrap mt-auto">
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Snack</span>
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Sweet</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recipe Card 4 -->
-        <div class="recipe-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0 animate-fadeInUp" data-category="dinner" data-recipe="taliwang" style="animation-delay: 0.4s;">
-          <div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="public/assets/taliwang.jpg" alt="Ayam Bakar Taliwang" class="w-full h-full rounded-xl object-cover transition-transform duration-300 hover:scale-105" />
-            <div class="absolute top-2.5 left-2.5 bg-black/80 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              🔥 Trending
-            </div>
-            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              <span>⭐⭐⭐⭐⭐</span>
-              <span class="ml-1">4.7</span>
-            </div>
-          </div>
-          <div class="px-5 py-5 sm:px-6 sm:py-6 flex flex-col h-full">
-            <h3 class="text-lg sm:text-xl mb-3 text-gray-800 font-bold line-clamp-2 min-h-[3.5rem]">Ayam Bakar Taliwang</h3>
-            <p class="text-gray-600 mb-4 leading-6 text-sm sm:text-base line-clamp-3 flex-grow">Ayam bakar khas Lombok dengan bumbu pedas dan aroma yang menggugah selera</p>
-            <div class="flex flex-col gap-2 mb-4 text-xs sm:text-sm text-gray-600">
-              <span>⏱️ 1 hour</span>
-              <span>👨‍🍳 Medium</span>
-              <span>❤️ 1.5k</span>
-            </div>
-            <div class="flex gap-2 flex-wrap mt-auto">
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Indonesian</span>
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Grilled</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recipe Card 5 -->
-        <div class="recipe-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0 animate-fadeInUp" data-category="dessert" data-recipe="cendol" style="animation-delay: 0.5s;">
-          <div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="public/assets/cendol.jpg" alt="Es Cendol Durian" class="w-full h-full rounded-xl object-cover transition-transform duration-300 hover:scale-105" />
-            <div class="absolute top-2.5 left-2.5 bg-black/80 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              🍃 Fresh
-            </div>
-            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              <span>⭐⭐⭐⭐</span>
-              <span class="ml-1">4.5</span>
-            </div>
-          </div>
-          <div class="px-5 py-5 sm:px-6 sm:py-6 flex flex-col h-full">
-            <h3 class="text-lg sm:text-xl mb-3 text-gray-800 font-bold line-clamp-2 min-h-[3.5rem]">Es Cendol Durian</h3>
-            <p class="text-gray-600 mb-4 leading-6 text-sm sm:text-base line-clamp-3 flex-grow">Minuman segar cendol dengan topping durian yang creamy dan manis</p>
-            <div class="flex flex-col gap-2 mb-4 text-xs sm:text-sm text-gray-600">
-              <span>⏱️ 30 min</span>
-              <span>👨‍🍳 Easy</span>
-              <span>❤️ 743</span>
-            </div>
-            <div class="flex gap-2 flex-wrap mt-auto">
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Dessert</span>
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Cold</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recipe Card 6 -->
-        <div class="recipe-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0 animate-fadeInUp" data-category="lunch" data-recipe="gadogado" style="animation-delay: 0.6s;">
-          <div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="public/assets/gadogado.jpg" alt="Gado-gado" class="w-full h-full rounded-xl object-cover transition-transform duration-300 hover:scale-105" />
-            <div class="absolute top-2.5 left-2.5 bg-black/80 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              🥗 Healthy
-            </div>
-            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              <span>⭐⭐⭐⭐</span>
-              <span class="ml-1">4.4</span>
-            </div>
-          </div>
-          <div class="px-5 py-5 sm:px-6 sm:py-6 flex flex-col h-full">
-            <h3 class="text-lg sm:text-xl mb-3 text-gray-800 font-bold line-clamp-2 min-h-[3.5rem]">Gado-gado</h3>
-            <p class="text-gray-600 mb-4 leading-6 text-sm sm:text-base line-clamp-3 flex-grow">Salad sayuran segar dengan bumbu kacang yang gurih dan lezat</p>
-            <div class="flex flex-col gap-2 mb-4 text-xs sm:text-sm text-gray-600">
-              <span>⏱️ 25 min</span>
-              <span>👨‍🍳 Easy</span>
-              <span>❤️ 967</span>
-            </div>
-            <div class="flex gap-2 flex-wrap mt-auto">
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Healthy</span>
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Vegetarian</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recipe Card 7 -->
-        <div class="recipe-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0 animate-fadeInUp" data-category="breakfast" data-recipe="bubur" style="animation-delay: 0.7s;">
-          <div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="public/assets/bubur.jpg" alt="Bubur Ayam Betawi" class="w-full h-full rounded-xl object-cover transition-transform duration-300 hover:scale-105" />
-            <div class="absolute top-2.5 left-2.5 bg-black/80 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              🌅 Morning
-            </div>
-            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              <span>⭐⭐⭐⭐</span>
-              <span class="ml-1">4.6</span>
-            </div>
-          </div>
-          <div class="px-5 py-5 sm:px-6 sm:py-6 flex flex-col h-full">
-            <h3 class="text-lg sm:text-xl mb-3 text-gray-800 font-bold line-clamp-2 min-h-[3.5rem]">Bubur Ayam Betawi</h3>
-            <p class="text-gray-600 mb-4 leading-6 text-sm sm:text-base line-clamp-3 flex-grow">Bubur ayam khas Betawi dengan topping lengkap dan kuah yang gurih</p>
-            <div class="flex flex-col gap-2 mb-4 text-xs sm:text-sm text-gray-600">
-              <span>⏱️ 40 min</span>
-              <span>👨‍🍳 Medium</span>
-              <span>❤️ 1.1k</span>
-            </div>
-            <div class="flex gap-2 flex-wrap mt-auto">
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Comfort Food</span>
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Traditional</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Recipe Card 8 -->
-        <div class="recipe-card bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0 animate-fadeInUp" data-category="dinner" data-recipe="ikanbakar" style="animation-delay: 0.8s;">
-          <div class="relative h-48 overflow-hidden rounded-t-xl">
-            <img src="public/assets/ikanbakar.jpg" alt="Ikan Bakar Manado" class="w-full h-full rounded-xl object-cover transition-transform duration-300 hover:scale-105" />
-            <div class="absolute top-2.5 left-2.5 bg-black/80 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              🌶️ Spicy
-            </div>
-            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-              <span>⭐⭐⭐⭐⭐</span>
-              <span class="ml-1">4.8</span>
-            </div>
-          </div>
-          <div class="px-5 py-5 sm:px-6 sm:py-6 flex flex-col h-full">
-            <h3 class="text-lg sm:text-xl mb-3 text-gray-800 font-bold line-clamp-2 min-h-[3.5rem]">Ikan Bakar Manado</h3>
-            <p class="text-gray-600 mb-4 leading-6 text-sm sm:text-base line-clamp-3 flex-grow">Ikan bakar dengan bumbu rica-rica khas Manado yang pedas dan segar</p>
-            <div class="flex flex-col gap-2 mb-4 text-xs sm:text-sm text-gray-600">
-              <span>⏱️ 35 min</span>
-              <span>👨‍🍳 Medium</span>
-              <span>❤️ 1.3k</span>
-            </div>
-            <div class="flex gap-2 flex-wrap mt-auto">
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Seafood</span>
-              <span class="bg-gray-50 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">Spicy</span>
-            </div>
-          </div>
-        </div>
+        
+        <!-- Other cards would follow the same corrected structure -->
 
       </div>
 
@@ -312,7 +147,7 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
         <div>
           <h3 class="text-3xl sm:text-4xl mb-2 text-amber-500 font-bold">2,847</h3>
-          <p class="text-base sm:text-lg opacity-90">Recipes Shared Today</p>
+          <p class="text-base sm:text-lg opacity-90">Recipes Shared</p>
         </div>
         <div>
           <h3 class="text-3xl sm:text-4xl mb-2 text-amber-500 font-bold">15,623</h3>
@@ -341,7 +176,7 @@
       <div>
         <h4 class="text-base sm:text-lg font-semibold mb-4">Quick Links</h4>
         <ul class="space-y-2">
-          <li><a href="#home" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Home</a></li>
+          <li><a href="#" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Home</a></li>
           <li><a href="#testimoni" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Testimoni</a></li>
           <li><a href="#features" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Features</a></li>
           <li><a href="#community" class="text-gray-300 hover:text-amber-500 text-sm sm:text-base">Community</a></li>
@@ -363,110 +198,156 @@
       <p>&copy; 2025 CookMate. All rights reserved.</p>
     </div>
   </footer>
+
   <script>
-    // Set current date
     document.addEventListener('DOMContentLoaded', function() {
+
+      // --- Data ---
+      const recipes = [
+        { id: 'gudeg', name: 'Nasi Gudeg Yogya', category: 'breakfast', time: '45 min', difficulty: 'Medium', likes: '1.2k', tags: ['Indonesian', 'Traditional'], rating: 4.8, image: 'https://placehold.co/400x300/f59e0b/ffffff?text=Gudeg', badge: '🔥 Trending', desc: 'Gudeg khas Yogyakarta dengan cita rasa manis dan gurih yang autentik.' },
+        { id: 'rendang', name: 'Rendang Daging Sapi', category: 'lunch', time: '2 hours', difficulty: 'Hard', likes: '2.1k', tags: ['Indonesian', 'Spicy'], rating: 4.9, image: 'https://placehold.co/400x300/7c2d12/ffffff?text=Rendang', badge: '👑 Popular', desc: 'Rendang daging sapi dengan bumbu rempah yang kaya dan cita rasa yang mendalam.' },
+        { id: 'pisang', name: 'Pisang Goreng Crispy', category: 'snack', time: '20 min', difficulty: 'Easy', likes: '856', tags: ['Snack', 'Sweet'], rating: 4.6, image: 'https://placehold.co/400x300/facc15/000000?text=Pisang+Goreng', badge: '🆕 New', desc: 'Pisang goreng dengan lapisan tepung crispy yang renyah dan manis.' },
+        { id: 'taliwang', name: 'Ayam Bakar Taliwang', category: 'dinner', time: '1 hour', difficulty: 'Medium', likes: '1.5k', tags: ['Indonesian', 'Grilled'], rating: 4.7, image: 'https://placehold.co/400x300/dc2626/ffffff?text=Ayam+Taliwang', badge: '🔥 Trending', desc: 'Ayam bakar khas Lombok dengan bumbu pedas dan aroma yang menggugah selera.' },
+        { id: 'cendol', name: 'Es Cendol Durian', category: 'dessert', time: '30 min', difficulty: 'Easy', likes: '743', tags: ['Dessert', 'Cold'], rating: 4.5, image: 'https://placehold.co/400x300/16a34a/ffffff?text=Cendol', badge: '🍃 Fresh', desc: 'Minuman segar cendol dengan topping durian yang creamy dan manis.' },
+        { id: 'gadogado', name: 'Gado-gado', category: 'lunch', time: '25 min', difficulty: 'Easy', likes: '967', tags: ['Healthy', 'Vegetarian'], rating: 4.4, image: 'https://placehold.co/400x300/84cc16/ffffff?text=Gado-gado', badge: '🥗 Healthy', desc: 'Salad sayuran segar dengan bumbu kacang yang gurih dan lezat.' },
+        { id: 'bubur', name: 'Bubur Ayam Betawi', category: 'breakfast', time: '40 min', difficulty: 'Medium', likes: '1.1k', tags: ['Comfort Food', 'Traditional'], rating: 4.6, image: 'https://placehold.co/400x300/d1d5db/000000?text=Bubur', badge: '🌅 Morning', desc: 'Bubur ayam khas Betawi dengan topping lengkap dan kuah yang gurih.' },
+        { id: 'ikanbakar', name: 'Ikan Bakar Manado', category: 'dinner', time: '35 min', difficulty: 'Medium', likes: '1.3k', tags: ['Seafood', 'Spicy'], rating: 4.8, image: 'https://placehold.co/400x300/ef4444/ffffff?text=Ikan+Bakar', badge: '🌶️ Spicy', desc: 'Ikan bakar dengan bumbu rica-rica khas Manado yang pedas dan segar.' }
+      ];
+
+      // --- Elements ---
       const currentDateElement = document.getElementById('current-date');
-      const today = new Date();
-      const options = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
-      };
-      currentDateElement.textContent = today.toLocaleDateString('id-ID', options);
-    });
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const recipeGrid = document.getElementById('recipe-grid');
+      const loadMoreBtn = document.querySelector('.load-more-btn');
+      const header = document.querySelector('header');
 
-    // Mobile menu toggle
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+      // --- Functions ---
 
-    mobileMenuButton.addEventListener('click', function() {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Filter functionality
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const recipeCards = document.querySelectorAll('.recipe-card');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => {
-          btn.classList.remove('active', 'bg-amber-500', 'border-amber-500', 'text-white');
-          btn.classList.add('bg-gray-50', 'border-gray-200', 'text-gray-600');
-        });
-        // Add active class to clicked button
-        this.classList.add('active', 'bg-amber-500', 'border-amber-500', 'text-white');
-        this.classList.remove('bg-gray-50', 'border-gray-200', 'text-gray-600');
+      // Function to create a recipe card element
+      const createRecipeCard = (recipe, index) => {
+        const card = document.createElement('div');
+        card.className = 'recipe-card flex flex-col bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:-translate-y-1 opacity-0';
+        card.setAttribute('data-category', recipe.category);
+        card.setAttribute('data-recipe', recipe.id);
+        card.style.animation = `fadeInUp 0.5s ease-out ${index * 0.1}s forwards`;
         
-        const category = this.getAttribute('data-category');
-        
-        // Filter recipe cards
-        recipeCards.forEach(card => {
-          if (category === 'all' || card.getAttribute('data-category') === category) {
-            card.style.display = 'block';
-            card.style.animation = 'fadeInUp 0.6s ease forwards';
+        card.innerHTML = `
+          <div class="relative h-48 overflow-hidden rounded-t-xl">
+            <img src="${recipe.image}" alt="${recipe.name}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" onerror="this.onerror=null;this.src='https://placehold.co/400x300/e0e0e0/ffffff?text=Image+Not+Found';">
+            <div class="absolute top-2.5 left-2.5 bg-black/70 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-medium">${recipe.badge}</div>
+            <div class="absolute top-2.5 right-2.5 bg-white/90 px-3 py-1 rounded-full text-xs sm:text-sm font-medium flex items-center">
+              <span class="text-yellow-400">⭐</span><span class="ml-1 font-semibold">${recipe.rating}</span>
+            </div>
+          </div>
+          <div class="p-5 sm:p-6 flex-1 flex flex-col">
+            <h3 class="text-lg sm:text-xl mb-2 text-gray-800 font-bold line-clamp-2">${recipe.name}</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed text-sm sm:text-base line-clamp-3 flex-grow">${recipe.desc}</p>
+            <div class="flex items-center gap-4 mb-4 text-xs sm:text-sm text-gray-600">
+              <span>⏱️ ${recipe.time}</span>
+              <span>👨‍🍳 ${recipe.difficulty}</span>
+              <span>❤️ ${recipe.likes}</span>
+            </div>
+            <div class="flex gap-2 flex-wrap mt-auto pt-4 border-t border-gray-100">
+              ${recipe.tags.map(tag => `<span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs font-medium">${tag}</span>`).join('')}
+            </div>
+          </div>
+        `;
+
+        // Add click listener to the card
+        card.addEventListener('click', () => {
+          if (recipe.id === 'gudeg' || recipe.id === 'cendol') {
+            // In a real app, you'd navigate to a specific URL like:
+            // window.location.href = \`detail_rekomendasi.html?recipe=\${recipe.id}\`;
+            alert(`Navigating to detail page for: ${recipe.name}`);
           } else {
-            card.style.display = 'none';
+            alert(`Opening recipe: ${recipe.name}\n\nDetail page for this recipe is under development!`);
           }
         });
-      });
-    });
 
-    // Recipe card click functionality
-    recipeCards.forEach(card => {
-      card.addEventListener('click', function() {
-        const recipeType = this.getAttribute('data-recipe');
-        const recipeName = this.querySelector('h3').textContent;
+        return card;
+      };
+
+      // Function to render recipes
+      const renderRecipes = (filteredRecipes) => {
+        recipeGrid.innerHTML = '';
+        filteredRecipes.forEach((recipe, index) => {
+          const card = createRecipeCard(recipe, index);
+          recipeGrid.appendChild(card);
+        });
+      };
+      
+      // Function to handle filtering
+      const filterRecipes = (category) => {
+        if (category === 'all') {
+          renderRecipes(recipes);
+        } else {
+          const filtered = recipes.filter(recipe => recipe.category === category);
+          renderRecipes(filtered);
+        }
+      };
+
+      // --- Initial Setup ---
+
+      // Set current date
+      const today = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+      currentDateElement.textContent = today.toLocaleDateString('en-US', options);
+
+      // Initial render of all recipes
+      renderRecipes(recipes);
+
+      // --- Event Listeners ---
+
+      // Mobile menu toggle
+      mobileMenuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Filter functionality
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active', 'bg-amber-500', 'border-amber-500', 'text-white');
+            btn.classList.add('bg-gray-100', 'border-gray-200', 'text-gray-600');
+          });
+          this.classList.add('active', 'bg-amber-500', 'border-amber-500', 'text-white');
+          this.classList.remove('bg-gray-100', 'border-gray-200', 'text-gray-600');
+          
+          const category = this.getAttribute('data-category');
+          filterRecipes(category);
+        });
+      });
+
+      // Load more functionality
+      loadMoreBtn.addEventListener('click', function() {
+        this.textContent = 'Loading...';
+        this.disabled = true;
         
-        // Navigate to detail page based on recipe type
-        switch(recipeType) {
-          case 'gudeg':
-            window.location.href = 'detail_rekomendasi.html';
-            break;
-          case 'cendol':
-            window.location.href = 'detail_rekomendasi.html';
-            break;
-          default:
-            // For recipes without detail pages yet
-            alert(`Membuka resep: ${recipeName}\n\nHalaman detail untuk resep ini sedang dalam pengembangan!`);
-            break;
+        setTimeout(() => {
+          alert('The "Load More" feature is coming soon!\nFor now, we are showing the most popular recipes of the day.');
+          this.textContent = 'Load More Recipes';
+          this.disabled = false;
+        }, 1000);
+      });
+
+      // Add scroll effect to header
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.add('bg-white/95', 'shadow-lg', 'backdrop-blur-sm');
+        } else {
+          header.classList.remove('bg-white/95', 'shadow-lg', 'backdrop-blur-sm');
         }
       });
-    });
 
-    // Load more functionality
-    const loadMoreBtn = document.querySelector('.load-more-btn');
-    loadMoreBtn.addEventListener('click', function() {
-      // Simulate loading more recipes
-      this.textContent = 'Loading...';
-      this.disabled = true;
-      
-      setTimeout(() => {
-        alert('Fitur load more akan segera hadir!\nSaat ini menampilkan resep populer hari ini.');
-        this.textContent = 'Load More Recipes';
-        this.disabled = false;
-      }, 1000);
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(e) {
-      if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-      }
-    });
-
-    // Add scroll effect to header
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
-      if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.backdropFilter = 'blur(10px)';
-      } else {
-        header.style.background = '#fff';
-        header.style.backdropFilter = 'none';
-      }
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
     });
   </script>
 
@@ -474,16 +355,12 @@
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
         transform: translateY(0);
       }
-    }
-
-    .animate-fadeInUp {
-      animation: fadeInUp 0.6s ease forwards;
     }
   </style>
 
